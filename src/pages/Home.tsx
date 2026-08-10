@@ -364,12 +364,22 @@ export default function Home() {
               </div>
 
               <div className="flex-1 flex flex-col md:flex-row h-[calc(100vh-64px)] overflow-hidden pb-16 md:pb-0">
-                {/* Left Column: Framed Portrait Image Card (Compact on Mobile) */}
+                {/* Left Column: Framed Image Card (16:9 Mobile, 3:4 Desktop) */}
                 <div className="w-full md:w-1/2 p-3 sm:p-4 md:p-10 flex items-center justify-center bg-[#0a0b0e] shrink-0">
-                  <div className="relative w-[160px] sm:w-[200px] md:w-full md:max-w-md aspect-[4/3] md:aspect-[3/4] max-h-[130px] sm:max-h-[160px] md:max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+                  {/* Desktop Image (3:4 Portrait) */}
+                  <div className="hidden md:block relative w-full max-w-md aspect-[3/4] max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
                       src={IMAGES.about} 
                       alt="Niki - Makeup Artist"
+                      className="w-full h-full object-cover object-[center_top] opacity-90 hover:scale-105 transition-transform duration-700" 
+                      referrerPolicy="no-referrer" 
+                    />
+                  </div>
+                  {/* Mobile Image (16:9 Landscape) */}
+                  <div className="block md:hidden relative w-full max-w-xs aspect-[16/9] max-h-[140px] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+                    <img 
+                      src="https://drive.google.com/thumbnail?id=1r_juGdUhZHbj6senueHky8PKM5EhqCpR&sz=w1080" 
+                      alt="Niki - Makeup Artist Mobile"
                       className="w-full h-full object-cover object-[center_top] opacity-90 hover:scale-105 transition-transform duration-700" 
                       referrerPolicy="no-referrer" 
                     />
