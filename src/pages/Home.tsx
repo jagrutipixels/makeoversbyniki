@@ -60,6 +60,16 @@ export default function Home() {
     };
   }, []);
 
+  // Preload all 5 hero slider images (landscape & mobile) in browser memory immediately
+  useEffect(() => {
+    SLIDES.forEach((slide) => {
+      const imgLandscape = new Image();
+      imgLandscape.src = slide.image.landscape;
+      const imgMobile = new Image();
+      imgMobile.src = slide.image.mobile;
+    });
+  }, []);
+
   // Auto-scroll / Auto-play hero slides every 8 seconds
   useEffect(() => {
     if (activePanel !== 'none') return;
