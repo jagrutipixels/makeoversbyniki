@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { IMAGES } from '../data';
-import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter, ArrowLeft } from 'lucide-react';
 
 const SLIDES = [
   {
@@ -249,12 +249,18 @@ export default function Home() {
               transition={{ type: 'tween', duration: 0.5, ease: 'easeInOut' }}
               className="fixed inset-0 bg-[#141517] z-[999] flex flex-col overflow-y-auto"
             >
-              {/* Top Panel Bar with Close Button */}
-              <div className="sticky top-0 z-[1000] w-full bg-[#141517]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
-                <span className="text-secondary tracking-[0.25em] text-xs font-bold uppercase">BROWSE CATEGORIES</span>
+              {/* Top Panel Bar with Back to Home & Close Buttons */}
+              <div className="sticky top-0 z-[1000] w-full bg-[#141517]/95 backdrop-blur-md px-6 md:px-12 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95"
+                  className="flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-1 cursor-pointer"
+                >
+                  <ArrowLeft size={16} />
+                  <span>BACK TO HOME</span>
+                </button>
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
                   aria-label="Close Categories Panel"
                 >
                   <CloseIcon size={16} />
@@ -288,7 +294,7 @@ export default function Home() {
                   className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary"
                 >
                   <CloseIcon size={16} />
-                  <span>CLOSE PANEL</span>
+                  <span>BACK TO HOME</span>
                 </button>
               </div>
             </motion.div>
@@ -305,12 +311,18 @@ export default function Home() {
               transition={{ type: 'tween', duration: 0.5, ease: 'easeInOut' }}
               className="fixed inset-0 bg-[#0d0e12] z-[999] flex flex-col overflow-y-auto"
             >
-              {/* Top Panel Bar with Close Button */}
-              <div className="sticky top-0 z-[1000] w-full bg-[#0d0e12]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
-                <span className="text-secondary tracking-[0.25em] text-xs font-bold uppercase">ABOUT MAKEOVERS BY NIKI</span>
+              {/* Top Panel Bar with Back to Home & Close Buttons */}
+              <div className="sticky top-0 z-[1000] w-full bg-[#0d0e12]/95 backdrop-blur-md px-6 md:px-12 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95"
+                  className="flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-1 cursor-pointer"
+                >
+                  <ArrowLeft size={16} />
+                  <span>BACK TO HOME</span>
+                </button>
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
                   aria-label="Close About Panel"
                 >
                   <CloseIcon size={16} />
