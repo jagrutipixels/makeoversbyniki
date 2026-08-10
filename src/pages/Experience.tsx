@@ -32,69 +32,68 @@ const SERVICES = [
 
 export default function Experience() {
   return (
-    <div className="bg-brand-bg w-full pt-32 pb-24">
+    <div className="bg-brand-bg w-full pt-24 md:pt-28 pb-20">
       <Helmet>
         <title>Signature Bridal Makeup Services | HNI Wedding Experience | Makeovers by Niki</title>
         <meta name="description" content="Discover bespoke luxury bridal services, including flawless HD and Airbrush makeup techniques. Elite wedding beauty experiences tailored for HNI and global brides." />
       </Helmet>
-      <header className="max-w-4xl mx-auto text-center px-6 mb-24">
-        <motion.h4 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6"
-        >
-          Bespoke Artistry
-        </motion.h4>
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-8"
-        >
-          Signature Bridal<br />
-          <span className="italic">Experience</span>
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-primary/70 font-light text-lg max-w-2xl mx-auto"
-        >
-          Every service is meticulously crafted to ensure you feel calm, confident, and impossibly beautiful. We use only the finest international luxury brands.
-        </motion.p>
-      </header>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start pb-24 border-b border-primary/10">
+      {/* Main Hero & Services Section (Side-by-Side Above-The-Fold Layout) */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start pb-20 border-b border-primary/10">
+        {/* Left Column: Sticky Bridal Image (Immediately visible above the fold) */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="lg:sticky lg:top-32 aspect-square"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="lg:col-span-5 lg:sticky lg:top-28 relative aspect-[4/5] sm:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10"
         >
-          <img src={IMAGES.experience} alt="Bridal Experience" className="w-full h-full object-cover object-[center_top] md:object-[center_20%]" referrerPolicy="no-referrer" />
+          <img 
+            src={IMAGES.experience} 
+            alt="Bridal Experience" 
+            className="w-full h-full object-cover object-[center_top]" 
+            referrerPolicy="no-referrer" 
+          />
         </motion.div>
         
-        <div className="flex flex-col space-y-16">
-          {SERVICES.map((s, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group"
-            >
-              <h3 className="text-2xl md:text-3xl font-serif text-primary mb-4 flex items-start md:items-center">
-                <span className="text-secondary mr-4 text-lg font-sans font-light mt-1 md:mt-0">{(idx + 1).toString().padStart(2, '0')}</span>
-                {s.title}
-              </h3>
-              <p className="text-primary/70 font-light leading-relaxed text-lg pl-12 border-l border-transparent group-hover:border-secondary transition-colors duration-500">
-                {s.desc}
-              </p>
-            </motion.div>
-          ))}
+        {/* Right Column: Title, Intro Paragraph, & Services List */}
+        <div className="lg:col-span-7 flex flex-col justify-start space-y-10">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <span className="uppercase tracking-[0.3em] text-secondary text-xs sm:text-sm font-medium mb-3 block">
+              Bespoke Artistry
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-primary leading-tight mb-4">
+              Signature Bridal <span className="italic">Experience</span>
+            </h1>
+            <p className="text-primary/80 font-light text-base sm:text-lg leading-relaxed mb-6 max-w-xl">
+              Every service is meticulously crafted to ensure you feel calm, confident, and impossibly beautiful. We use only the finest international luxury brands.
+            </p>
+            <div className="w-16 h-[1px] bg-secondary/60" />
+          </motion.div>
+
+          <div className="flex flex-col space-y-10">
+            {SERVICES.map((s, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="group border-b border-primary/5 pb-8 last:border-b-0"
+              >
+                <h3 className="text-2xl md:text-3xl font-serif text-primary mb-3 flex items-start md:items-center">
+                  <span className="text-secondary mr-4 text-base md:text-lg font-sans font-light mt-1 md:mt-0">{(idx + 1).toString().padStart(2, '0')}</span>
+                  {s.title}
+                </h3>
+                <p className="text-primary/70 font-light leading-relaxed text-base md:text-lg pl-9 md:pl-10 border-l border-transparent group-hover:border-secondary transition-colors duration-500">
+                  {s.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
