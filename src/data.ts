@@ -4,11 +4,11 @@ export const IMAGES = {
   heroSlides: [
     {
       landscape: "https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1080"
+      mobile: "https://drive.google.com/thumbnail?id=1P8LQpXOfVL6EtGcvhgB6LyB_erM310qv&sz=w1080"
     },
     {
       landscape: "https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=1KunUOvGoRzlpP5MEwY6YKkd8GWpN-ZIm&sz=w1080"
+      mobile: "https://drive.google.com/thumbnail?id=1QnWu7oudp07eTubCyA-7jC1xbRcDTaeb&sz=w1080"
     },
     {
       landscape: "https://drive.google.com/thumbnail?id=19LwcHjLpnn4Xijr4VgeN3cM_LHQ4wSHx&sz=w1920",
@@ -16,11 +16,11 @@ export const IMAGES = {
     },
     {
       landscape: "https://drive.google.com/thumbnail?id=1AkVxp61Nbiq7_tMPbz1RXgFVZfEBdBD2&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=1_CxTVT8A1h5NZpKofgdft4Ia5h8uezQs&sz=w1080"
+      mobile: "https://drive.google.com/thumbnail?id=1ebPsYAv2XV_BheDtxNUSIni6eCfJxncy&sz=w1080"
     },
     {
       landscape: "https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1080"
+      mobile: "https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080"
     }
   ],
   heroImages: [
