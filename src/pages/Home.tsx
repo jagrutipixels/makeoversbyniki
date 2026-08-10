@@ -33,11 +33,36 @@ const SLIDES = [
 ];
 
 const CATEGORIES = [
-  { title: "Luxury Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080", position: "object-[center_top]" },
-  { title: "HD Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080", position: "object-[center_top]" },
-  { title: "Airbrush Bridal Makeup", image: "https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080", position: "object-[center_top]" },
-  { title: "Engagement & Reception Styling", image: "https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080", position: "object-[center_top]" },
-  { title: "Destination Bridal Experience", image: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080", position: "object-[center_top]" }
+  { 
+    title: "Luxury Bridal Makeup", 
+    landscape: "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080",
+    position: "object-[80%_center]" 
+  },
+  { 
+    title: "HD Bridal Makeup", 
+    landscape: "https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080",
+    position: "object-[center_top]" 
+  },
+  { 
+    title: "Airbrush Bridal Makeup", 
+    landscape: "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080",
+    position: "object-[65%_top]" 
+  },
+  { 
+    title: "Engagement & Reception Styling", 
+    landscape: "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080",
+    position: "object-center" 
+  },
+  { 
+    title: "Destination Bridal Experience", 
+    landscape: "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080",
+    position: "object-[30%_center]" 
+  }
 ];
 
 export default function Home() {
@@ -276,7 +301,18 @@ export default function Home() {
                     onClick={() => setActivePanel('none')}
                     className="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-[#ffffff15] last:border-b-0 md:last:border-r-0 min-h-[140px] md:min-h-0 md:h-full block"
                   >
-                    <img src={cat.image} className={`absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ${cat.position}`} referrerPolicy="no-referrer" />
+                    <img 
+                      src={cat.landscape} 
+                      alt={cat.title}
+                      className={`absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 hidden md:block ${cat.position}`} 
+                      referrerPolicy="no-referrer" 
+                    />
+                    <img 
+                      src={cat.mobile} 
+                      alt={cat.title}
+                      className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 block md:hidden object-[center_top]" 
+                      referrerPolicy="no-referrer" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-black/40 to-transparent md:bg-gradient-to-t md:from-[#0b0c10] md:via-black/20 md:to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700" />
                     
                     <div className="absolute bottom-4 md:bottom-12 left-4 md:left-8 pr-12 md:pr-24 flex flex-col md:flex-col md:justify-end md:items-start z-10 transition-transform duration-500 transform group-hover:-translate-y-2">
