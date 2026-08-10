@@ -213,36 +213,22 @@ export default function Home() {
           </AnimatePresence>
         </div>
 
-        {/* Pagination & Arrows */}
-        <div className="absolute bottom-6 right-6 sm:bottom-6 sm:right-10 md:bottom-10 md:right-10 z-10 flex items-center space-x-4 sm:space-x-6 md:space-x-12">
-          <div className="flex items-center space-x-2.5 sm:space-x-3 md:space-x-6">
-            {SLIDES.map((_, i) => (
-              <div 
-                key={i} 
-                onClick={() => setCurrentSlide(i)}
-                className={`flex items-center cursor-pointer transition-colors ${i === currentSlide ? 'text-secondary' : 'text-white/40 hover:text-white/80'}`}
-              >
-                <span className="text-xs sm:text-sm font-medium tracking-widest">{(i + 1).toString().padStart(2, '0')}</span>
-                {i === currentSlide && <div className="hidden md:block w-8 md:w-12 h-[1px] bg-secondary ml-3 md:ml-6" />}
-              </div>
-            ))}
-          </div>
-          <div className="flex space-x-1.5 sm:space-x-2">
-            <button 
-              onClick={prevSlide}
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors bg-black/30 backdrop-blur-sm md:bg-transparent"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft size={18} className="text-white/80 hover:text-white" />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors bg-black/30 backdrop-blur-sm md:bg-transparent"
-              aria-label="Next Slide"
-            >
-              <ChevronRight size={18} className="text-white/80 hover:text-white" />
-            </button>
-          </div>
+        {/* Navigation Arrows */}
+        <div className="absolute bottom-6 right-6 sm:bottom-6 sm:right-10 md:bottom-10 md:right-10 z-10 flex items-center space-x-1.5 sm:space-x-2">
+          <button 
+            onClick={prevSlide}
+            className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors bg-black/30 backdrop-blur-sm md:bg-transparent"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft size={18} className="text-white/80 hover:text-white" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center hover:bg-white/10 rounded-full transition-colors bg-black/30 backdrop-blur-sm md:bg-transparent"
+            aria-label="Next Slide"
+          >
+            <ChevronRight size={18} className="text-white/80 hover:text-white" />
+          </button>
         </div>
 
         {/* Categories Overlay Panel */}
