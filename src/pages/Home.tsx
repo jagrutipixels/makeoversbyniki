@@ -246,34 +246,51 @@ export default function Home() {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.6, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-[#141517] z-50 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden pb-16 md:pb-0"
+              transition={{ type: 'tween', duration: 0.5, ease: 'easeInOut' }}
+              className="fixed inset-0 bg-[#141517] z-[999] flex flex-col overflow-y-auto"
             >
-              {/* High-Visibility Fixed Close Button */}
-              <button 
-                onClick={() => setActivePanel('none')}
-                className="fixed top-5 right-5 z-50 flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 border border-secondary"
-                aria-label="Close Categories Panel"
-              >
-                <CloseIcon size={16} />
-                <span>CLOSE</span>
-              </button>
-
-              {CATEGORIES.map((cat, i) => (
-                <Link 
-                  to="/experience" 
-                  key={i} 
-                  className="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-[#ffffff15] last:border-b-0 md:last:border-r-0 min-h-[130px] md:min-h-0 md:h-full block"
+              {/* Top Panel Bar with Close Button */}
+              <div className="sticky top-0 z-[1000] w-full bg-[#141517]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
+                <span className="text-secondary tracking-[0.25em] text-xs font-bold uppercase">BROWSE CATEGORIES</span>
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95"
+                  aria-label="Close Categories Panel"
                 >
-                  <img src={cat.image} className={`absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ${cat.position}`} referrerPolicy="no-referrer" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-black/40 to-transparent md:bg-gradient-to-t md:from-[#0b0c10] md:via-black/20 md:to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700" />
-                  
-                  <div className="absolute bottom-4 md:bottom-12 left-4 md:left-8 pr-12 md:pr-24 flex flex-col md:flex-col md:justify-end md:items-start z-10 transition-transform duration-500 transform group-hover:-translate-y-2">
-                    <span className="text-2xl md:text-5xl font-bold text-white/40 mb-1 md:mb-4 group-hover:text-secondary group-hover:drop-shadow-lg transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{(i + 1).toString().padStart(2, '0')}</span>
-                    <span className="text-sm md:text-2xl font-sans font-bold leading-tight group-hover:text-white transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{cat.title}</span>
-                  </div>
-                </Link>
-              ))}
+                  <CloseIcon size={16} />
+                  <span>CLOSE</span>
+                </button>
+              </div>
+
+              <div className="flex-1 flex flex-col md:flex-row pb-24 md:pb-0">
+                {CATEGORIES.map((cat, i) => (
+                  <Link 
+                    to="/experience" 
+                    key={i} 
+                    onClick={() => setActivePanel('none')}
+                    className="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-[#ffffff15] last:border-b-0 md:last:border-r-0 min-h-[140px] md:min-h-0 md:h-full block"
+                  >
+                    <img src={cat.image} className={`absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ${cat.position}`} referrerPolicy="no-referrer" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-black/40 to-transparent md:bg-gradient-to-t md:from-[#0b0c10] md:via-black/20 md:to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700" />
+                    
+                    <div className="absolute bottom-4 md:bottom-12 left-4 md:left-8 pr-12 md:pr-24 flex flex-col md:flex-col md:justify-end md:items-start z-10 transition-transform duration-500 transform group-hover:-translate-y-2">
+                      <span className="text-2xl md:text-5xl font-bold text-white/40 mb-1 md:mb-4 group-hover:text-secondary group-hover:drop-shadow-lg transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{(i + 1).toString().padStart(2, '0')}</span>
+                      <span className="text-sm md:text-2xl font-sans font-bold leading-tight group-hover:text-white transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{cat.title}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Floating Bottom Close Bar for Mobile */}
+              <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary"
+                >
+                  <CloseIcon size={16} />
+                  <span>CLOSE PANEL</span>
+                </button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -285,40 +302,58 @@ export default function Home() {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.6, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-[#0d0e12] z-50 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden"
+              transition={{ type: 'tween', duration: 0.5, ease: 'easeInOut' }}
+              className="fixed inset-0 bg-[#0d0e12] z-[999] flex flex-col overflow-y-auto"
             >
-              {/* High-Visibility Fixed Close Button */}
-              <button 
-                onClick={() => setActivePanel('none')}
-                className="fixed top-5 right-5 z-50 flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 border border-secondary"
-                aria-label="Close About Panel"
-              >
-                <CloseIcon size={16} />
-                <span>CLOSE</span>
-              </button>
-
-              <div className="w-full md:w-1/2 min-h-[220px] md:h-full relative overflow-hidden shrink-0">
-                <img src={IMAGES.about} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
+              {/* Top Panel Bar with Close Button */}
+              <div className="sticky top-0 z-[1000] w-full bg-[#0d0e12]/95 backdrop-blur-md px-6 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
+                <span className="text-secondary tracking-[0.25em] text-xs font-bold uppercase">ABOUT MAKEOVERS BY NIKI</span>
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95"
+                  aria-label="Close About Panel"
+                >
+                  <CloseIcon size={16} />
+                  <span>CLOSE</span>
+                </button>
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 py-8 relative bg-[#111216] overflow-y-auto overflow-x-hidden pb-24 md:pb-8">
-                <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-3 md:mb-6 mt-4 md:mt-0 font-medium">About Me</p>
-                <h2 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-tight mb-4 md:mb-8 text-white drop-shadow-sm">
-                  My name is Niki,<br/>I'm a Makeup Artist.
-                </h2>
-                <div className="w-8 h-[1px] bg-white/20 mb-8" />
-                <p className="text-white/60 leading-relaxed font-light mb-12 max-w-lg text-sm md:text-base">
-                  The world without beauty will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My transformations are inspired by light, color, creative perspective, techniques & personalities.
-                </p>
-                <Link to="/about" className="inline-flex text-secondary text-sm font-semibold tracking-widest uppercase hover:text-white transition-colors select-none">
-                  READ MORE &gt;
-                </Link>
-                
-                <div className="absolute -bottom-8 md:-bottom-12 md:left-10 text-[5rem] sm:text-[6rem] md:text-[14rem] font-sans font-black text-white/[0.04] select-none pointer-events-none tracking-tighter overflow-hidden">
-                  About
+
+              <div className="flex-1 flex flex-col md:flex-row pb-24 md:pb-0">
+                <div className="w-full md:w-1/2 min-h-[260px] md:h-full relative overflow-hidden shrink-0">
+                  <img src={IMAGES.about} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
                 </div>
+                <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 py-8 relative bg-[#111216] overflow-y-auto overflow-x-hidden">
+                  <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-3 md:mb-6 mt-2 md:mt-0 font-medium">About Me</p>
+                  <h2 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-tight mb-4 md:mb-8 text-white drop-shadow-sm">
+                    My name is Niki,<br/>I'm a Makeup Artist.
+                  </h2>
+                  <div className="w-8 h-[1px] bg-white/20 mb-6" />
+                  <p className="text-white/60 leading-relaxed font-light mb-8 max-w-lg text-sm md:text-base">
+                    The world without beauty will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My transformations are inspired by light, color, creative perspective, techniques & personalities.
+                  </p>
+                  <Link 
+                    to="/about" 
+                    onClick={() => setActivePanel('none')}
+                    className="inline-flex text-secondary text-sm font-semibold tracking-widest uppercase hover:text-white transition-colors select-none mb-6"
+                  >
+                    READ MORE &gt;
+                  </Link>
 
+                  <div className="absolute -bottom-8 md:-bottom-12 md:left-10 text-[5rem] sm:text-[6rem] md:text-[14rem] font-sans font-black text-white/[0.04] select-none pointer-events-none tracking-tighter overflow-hidden">
+                    About
+                  </div>
+                </div>
+              </div>
 
+              {/* Floating Bottom Close Bar for Mobile */}
+              <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+                <button 
+                  onClick={() => setActivePanel('none')}
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary"
+                >
+                  <CloseIcon size={16} />
+                  <span>CLOSE PANEL</span>
+                </button>
               </div>
             </motion.div>
           )}
