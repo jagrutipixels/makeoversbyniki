@@ -276,14 +276,14 @@ export default function Home() {
               <div className="sticky top-0 z-[1000] w-full bg-[#141517]/95 backdrop-blur-md px-6 md:px-12 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs md:text-sm font-bold transition-colors py-1 cursor-pointer"
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-5 py-2.5 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
                 >
                   <ArrowLeft size={18} />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
+                  className="flex items-center space-x-2 bg-white/10 text-white hover:bg-white/20 px-4 py-2.5 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl transition-all active:scale-95 cursor-pointer"
                   aria-label="Close Categories Panel"
                 >
                   <CloseIcon size={16} />
@@ -320,13 +320,13 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Floating Bottom Go Back Bar for Mobile */}
-              <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+              {/* Floating Bottom Go Back Bar for Both Desktop & Mobile */}
+              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary"
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary hover:bg-white transition-all cursor-pointer"
                 >
-                  <ArrowLeft size={16} />
+                  <ArrowLeft size={18} />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
               </div>
@@ -348,14 +348,14 @@ export default function Home() {
               <div className="sticky top-0 z-[1000] w-full bg-[#0d0e12]/95 backdrop-blur-md px-6 md:px-12 py-4 border-b border-white/10 flex items-center justify-between shadow-2xl">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs md:text-sm font-bold transition-colors py-1 cursor-pointer"
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-5 py-2.5 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
                 >
                   <ArrowLeft size={18} />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 cursor-pointer"
+                  className="flex items-center space-x-2 bg-white/10 text-white hover:bg-white/20 px-4 py-2.5 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl transition-all active:scale-95 cursor-pointer"
                   aria-label="Close About Panel"
                 >
                   <CloseIcon size={16} />
@@ -411,13 +411,13 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating Bottom Go Back Bar for Mobile */}
-              <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+              {/* Floating Bottom Go Back Bar for Both Desktop & Mobile */}
+              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary"
+                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary hover:bg-white transition-all cursor-pointer"
                 >
-                  <ArrowLeft size={16} />
+                  <ArrowLeft size={18} />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
               </div>
