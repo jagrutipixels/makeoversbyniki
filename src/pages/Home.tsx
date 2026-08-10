@@ -330,13 +330,23 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex-1 flex flex-col md:flex-row pb-24 md:pb-0">
-                <div className="w-full md:w-1/2 min-h-[260px] md:h-full relative overflow-hidden shrink-0">
-                  <img src={IMAGES.about} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
+              <div className="flex-1 flex flex-col md:flex-row h-auto md:h-[calc(100vh-64px)] overflow-hidden">
+                {/* Left Column: Framed Portrait Image Card */}
+                <div className="w-full md:w-1/2 p-6 md:p-10 flex items-center justify-center bg-[#0a0b0e]">
+                  <div className="relative w-full max-w-md aspect-[3/4] max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+                    <img 
+                      src={IMAGES.about} 
+                      alt="Niki - Makeup Artist"
+                      className="w-full h-full object-cover object-[center_top] opacity-90 hover:scale-105 transition-transform duration-700" 
+                      referrerPolicy="no-referrer" 
+                    />
+                  </div>
                 </div>
-                <div className="w-full md:w-1/2 flex flex-col justify-start px-6 md:px-16 pt-6 md:pt-12 lg:pt-16 pb-8 relative bg-[#111216] overflow-y-auto overflow-x-hidden">
+
+                {/* Right Column: Top-Aligned Text Card */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 py-8 md:py-12 relative bg-[#111216] overflow-y-auto">
                   <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-4 font-medium">About Me</p>
-                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-3 md:mb-6 text-white drop-shadow-sm">
+                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-3 md:mb-5 text-white drop-shadow-sm">
                     My name is Niki,<br/>I'm a Makeup Artist.
                   </h2>
                   <div className="w-8 h-[1px] bg-white/20 mb-4 md:mb-6" />
@@ -352,7 +362,7 @@ export default function Home() {
                     <span>&gt;</span>
                   </Link>
 
-                  <div className="absolute -bottom-8 md:-bottom-12 md:left-10 text-[5rem] sm:text-[6rem] md:text-[14rem] font-sans font-black text-white/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
+                  <div className="absolute -bottom-6 md:-bottom-10 md:left-10 text-[5rem] sm:text-[6rem] md:text-[12rem] font-sans font-black text-white/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
                     About
                   </div>
                 </div>
