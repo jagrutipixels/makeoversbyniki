@@ -89,14 +89,7 @@ export default function Home() {
     });
   }, []);
 
-  // Auto-scroll / Auto-play hero slides every 12 seconds
-  useEffect(() => {
-    if (activePanel !== 'none') return;
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 12000);
-    return () => clearInterval(timer);
-  }, [activePanel]);
+  // Manual slide navigation (auto-scroll disabled)
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
