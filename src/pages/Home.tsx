@@ -375,8 +375,8 @@ export default function Home() {
                       referrerPolicy="no-referrer" 
                     />
                   </div>
-                  {/* Mobile Image (4:3 Classic Card) */}
-                  <div className="block md:hidden relative w-full max-w-[280px] aspect-[4/3] max-h-[180px] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+                  {/* Mobile Image (3:4 Portrait Card) */}
+                  <div className="block md:hidden relative h-[180px] sm:h-[210px] aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
                       src="https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080" 
                       alt="Niki - Makeup Artist Mobile"
