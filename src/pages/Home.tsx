@@ -59,14 +59,14 @@ const CATEGORIES = [
     landscape: "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080",
     position: "object-center",
-    mobilePosition: "object-[center_35%]"
+    mobilePosition: "object-[center_12%]"
   },
   { 
     title: "Destination Bridal Experience", 
     landscape: "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080",
     position: "object-[30%_center]",
-    mobilePosition: "object-[center_35%]"
+    mobilePosition: "object-[center_12%]"
   }
 ];
 
