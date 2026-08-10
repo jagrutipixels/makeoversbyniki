@@ -5,58 +5,49 @@ import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
-    <div className="bg-brand-bg w-full pt-32 pb-24">
+    <div className="bg-brand-bg w-full pt-24 md:pt-28 pb-20">
       <Helmet>
         <title>About Niki | Expert Luxury Bridal Makeup Artist for HNI Weddings</title>
         <meta name="description" content="Discover the artistry of Niki, a premier luxury bridal makeup artist with decades of global expertise. Creating timeless beauty for elite HNI clients across India and internationally." />
       </Helmet>
-      {/* Intro Header */}
-      <header className="max-w-4xl mx-auto text-center px-6 mb-24">
-        <motion.h4 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6"
-        >
-          The Story Behind The Artist
-        </motion.h4>
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-8"
-        >
-          Two Decades of<br />
-          <span className="italic">Bridal Excellence</span>
-        </motion.h1>
-      </header>
 
-      {/* Main Story Section */}
-      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+      {/* Main Hero & Story Section (Side-by-Side Layout) */}
+      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        {/* Left Column: Artist Portrait (Immediately visible above the fold) */}
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="lg:col-span-5 relative aspect-[3/4]"
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="lg:col-span-5 relative aspect-[4/5] sm:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10"
         >
           <img 
             src={IMAGES.about} 
             alt="Niki working" 
-            className="w-full h-full object-cover object-[center_top] md:object-[center_20%]"
+            className="w-full h-full object-cover object-[center_top]"
             referrerPolicy="no-referrer"
           />
         </motion.div>
 
+        {/* Right Column: Title, Subtitle, & Story Text */}
         <motion.div 
           initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="lg:col-span-7 flex flex-col justify-center space-y-8"
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:col-span-7 flex flex-col justify-start space-y-6"
         >
-          <h2 className="text-3xl md:text-5xl font-serif text-primary">The Art of Timeless Beauty</h2>
-          <div className="space-y-6 text-primary/80 font-light leading-relaxed text-lg">
+          <div>
+            <span className="uppercase tracking-[0.3em] text-secondary text-xs sm:text-sm font-medium mb-3 block">
+              The Story Behind The Artist
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-primary leading-tight mb-4">
+              Two Decades of <span className="italic">Bridal Excellence</span>
+            </h1>
+            <div className="w-16 h-[1px] bg-secondary/60 mb-6" />
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-serif text-primary">The Art of Timeless Beauty</h2>
+
+          <div className="space-y-4 text-primary/80 font-light leading-relaxed text-base sm:text-lg">
             <p>
               As a globally sought-after luxury bridal makeup artist, Niki's journey began after observing countless weddings and becoming fascinated by why some brides looked effortlessly exquisite while others missed the mark. This curiosity led to years of studying bridal aesthetics, facial harmony, and high-fashion makeup artistry.
             </p>
@@ -68,28 +59,28 @@ export default function About() {
             </p>
           </div>
           
-          <div className="pt-8 border-t border-primary/10 mt-8 grid grid-cols-2 gap-8">
+          <div className="pt-6 border-t border-primary/10 grid grid-cols-2 gap-6">
             <div>
-              <h4 className="font-serif text-3xl text-primary mb-2">20+</h4>
+              <h4 className="font-serif text-3xl text-primary mb-1">20+</h4>
               <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Years Experience</p>
             </div>
             <div>
-              <h4 className="font-serif text-3xl text-primary mb-2">India & Kenya</h4>
+              <h4 className="font-serif text-3xl text-primary mb-1">India & Kenya</h4>
               <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Global Expertise</p>
             </div>
           </div>
 
           {/* Instagram Live Work Section */}
-          <div className="pt-12 mt-8 border-t border-primary/10 space-y-6">
+          <div className="pt-8 border-t border-primary/10 space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-primary font-medium tracking-widest uppercase text-xs">Live Work Gallery</span>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-primary/50 hover:text-secondary text-xs tracking-widest uppercase transition-colors flex items-center space-x-2">
+              <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="text-primary/50 hover:text-secondary text-xs tracking-widest uppercase transition-colors flex items-center space-x-2">
                  <span>@makeoversbyniki</span>
               </a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[IMAGES.portfolio[0], IMAGES.portfolio[1], IMAGES.portfolio[2], IMAGES.portfolio[3]].map((img, idx) => (
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" key={idx} className="block relative group overflow-hidden aspect-square border border-primary/10">
+                <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" key={idx} className="block relative group overflow-hidden aspect-square border border-primary/10">
                   <img src={img} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-brand-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <span className="text-secondary tracking-widest text-[10px] uppercase font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-500">View</span>
