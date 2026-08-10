@@ -7,32 +7,32 @@ import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter
 
 const SLIDES = [
   {
-    subtitle: "Luxury Bridal",
-    title: "Curating Flawless Bridal Looks Globally",
+    subtitle: "ROYAL BRIDAL EXPERIENCE",
+    title: "Crafting Unforgettable Grace for Your Special Day",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[0]
   },
   {
-    subtitle: "Editorial",
-    title: "Captivating Looks for Unforgettable Nights",
+    subtitle: "CELEBRITY & EDITORIAL",
+    title: "Dramatic Allure Designed for the Spotlight",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[4]
   },
   {
-    subtitle: "Signature HD",
-    title: "Redefining Timeless Bridal Elegance",
+    subtitle: "SIGNATURE HD GLOW",
+    title: "Soft Elegance Crafted for Every Radiant Angle",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[1]
   },
   {
-    subtitle: "Airbrush",
-    title: "Flawless Longevity & Weightless Feel",
+    subtitle: "SILK AIRBRUSH FINISH",
+    title: "Impeccable Smoothness with an Effortless Glow",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[2]
   },
   {
-    subtitle: "Destination",
-    title: "Uncompromising Experience Anywhere",
+    subtitle: "GLOBAL DESTINATION",
+    title: "Bespoke Luxury Beauty Wherever You Say I Do",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[3]
   }
@@ -60,12 +60,12 @@ export default function Home() {
     };
   }, []);
 
-  // Auto-scroll / Auto-play hero slides every 5 seconds
+  // Auto-scroll / Auto-play hero slides every 4 seconds
   useEffect(() => {
     if (activePanel !== 'none') return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(timer);
   }, [activePanel]);
 
