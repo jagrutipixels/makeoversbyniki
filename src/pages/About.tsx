@@ -62,37 +62,90 @@ export default function About() {
             </p>
           </div>
           
-          <div className="pt-6 border-t border-primary/10 grid grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-serif text-3xl text-primary mb-1">20+</h4>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Years Experience</p>
+          {/* Mobile Only: Stats & Instagram Live Work Section */}
+          <div className="block lg:hidden space-y-8 pt-6 border-t border-primary/10">
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-serif text-3xl text-primary mb-1">20+</h4>
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Years Experience</p>
+              </div>
+              <div>
+                <h4 className="font-serif text-3xl text-primary mb-1">India & Kenya</h4>
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Global Expertise</p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-serif text-3xl text-primary mb-1">India & Kenya</h4>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/60">Global Expertise</p>
-            </div>
-          </div>
 
-          {/* Instagram Live Work Section */}
-          <div className="pt-8 border-t border-primary/10 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-primary font-medium tracking-widest uppercase text-xs">Live Work Gallery</span>
-              <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="text-primary/50 hover:text-secondary text-xs tracking-widest uppercase transition-colors flex items-center space-x-2">
-                 <span>@makeoversbyniki</span>
-              </a>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {[IMAGES.portfolio[0], IMAGES.portfolio[1], IMAGES.portfolio[2], IMAGES.portfolio[3]].map((img, idx) => (
-                <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" key={idx} className="block relative group overflow-hidden aspect-square border border-primary/10">
-                  <img src={img} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" referrerPolicy="no-referrer" />
-                  <div className="absolute inset-0 bg-brand-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <span className="text-secondary tracking-widest text-[10px] uppercase font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-500">View</span>
-                  </div>
+            <div className="pt-4 border-t border-primary/10 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-primary font-medium tracking-widest uppercase text-xs">Live Work Gallery</span>
+                <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="text-primary/50 hover:text-secondary text-xs tracking-widest uppercase transition-colors flex items-center space-x-2">
+                   <span>@makeoversbyniki</span>
                 </a>
-              ))}
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[IMAGES.portfolio[0], IMAGES.portfolio[1], IMAGES.portfolio[2], IMAGES.portfolio[3]].map((img, idx) => (
+                  <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" key={idx} className="block relative group overflow-hidden aspect-square border border-primary/10">
+                    <img src={img} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" referrerPolicy="no-referrer" />
+                    <div className="absolute inset-0 bg-brand-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                      <span className="text-secondary tracking-widest text-[10px] uppercase font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-500">View</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* Desktop Only: Full-Width Centered Stats & Live Work Gallery */}
+      <section className="hidden lg:block max-w-6xl mx-auto px-6 mt-16 pt-12 border-t border-primary/10">
+        {/* Centered Stats Bar */}
+        <div className="grid grid-cols-2 gap-12 max-w-3xl mx-auto text-center pb-12 border-b border-primary/10">
+          <div className="flex flex-col items-center">
+            <h4 className="font-serif text-4xl text-primary mb-2">20+</h4>
+            <p className="text-xs uppercase tracking-[0.25em] text-secondary font-medium">Years Experience</p>
+          </div>
+          <div className="flex flex-col items-center border-l border-primary/10 pl-12">
+            <h4 className="font-serif text-4xl text-primary mb-2">India & Kenya</h4>
+            <p className="text-xs uppercase tracking-[0.25em] text-secondary font-medium">Global Expertise</p>
+          </div>
+        </div>
+
+        {/* Centered Instagram Live Work Section */}
+        <div className="pt-12 space-y-6 max-w-5xl mx-auto">
+          <div className="flex items-center justify-between">
+            <span className="text-primary font-medium tracking-[0.2em] uppercase text-sm">Live Work Gallery</span>
+            <a 
+              href="https://www.instagram.com/makeoversbyniki" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-secondary hover:text-white text-xs tracking-widest uppercase transition-colors flex items-center space-x-2 font-semibold"
+            >
+              <span>@MAKEOVERSBYNIKI</span>
+            </a>
+          </div>
+          <div className="grid grid-cols-4 gap-6">
+            {[IMAGES.portfolio[0], IMAGES.portfolio[1], IMAGES.portfolio[2], IMAGES.portfolio[3]].map((img, idx) => (
+              <a 
+                href="https://www.instagram.com/makeoversbyniki" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                key={idx} 
+                className="block relative group overflow-hidden aspect-square rounded-sm border border-primary/10 shadow-lg"
+              >
+                <img 
+                  src={img} 
+                  alt="Niki Bridal Makeup Portfolio" 
+                  className="w-full h-full object-cover opacity-85 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" 
+                  referrerPolicy="no-referrer" 
+                />
+                <div className="absolute inset-0 bg-brand-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <span className="text-secondary tracking-widest text-xs uppercase font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-500">View Work</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Values Section */}
