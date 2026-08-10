@@ -378,7 +378,7 @@ export default function Home() {
                   {/* Mobile Image (Full-Width 16:9 Landscape Banner) */}
                   <div className="block md:hidden relative w-full aspect-[16/9] max-h-[170px] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
-                      src="https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080" 
+                      src="https://drive.google.com/thumbnail?id=1zhmnxlQS1iuk77C_2n6GOgGmUKyJMLUq&sz=w1080" 
                       alt="Niki - Makeup Artist Mobile"
                       className="w-full h-full object-cover object-[center_top] opacity-95 hover:scale-105 transition-transform duration-700" 
                       referrerPolicy="no-referrer" 
