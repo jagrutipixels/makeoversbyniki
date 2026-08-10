@@ -128,20 +128,20 @@ export default function Home() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Mobile Quick Action Pills */}
-        <div className="md:hidden absolute top-4 right-4 z-30 flex items-center space-x-2">
+        {/* Mobile Vertical Right Side Strip (Positioned on right edge to leave top text 100% clean) */}
+        <div className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-2.5">
           <button 
             onClick={() => setActivePanel(activePanel === 'categories' ? 'none' : 'categories')}
-            className={`px-3.5 py-1.5 rounded-full backdrop-blur-md text-[10px] tracking-widest uppercase font-medium border transition-all ${
-              activePanel === 'categories' ? 'bg-secondary text-brand-bg border-secondary shadow-lg' : 'bg-black/50 text-white/90 border-white/20'
+            className={`[writing-mode:vertical-rl] rotate-180 px-2 py-3 rounded-md backdrop-blur-md text-[9px] tracking-[0.2em] uppercase font-bold border transition-all ${
+              activePanel === 'categories' ? 'bg-secondary text-brand-bg border-secondary shadow-xl' : 'bg-black/70 text-white/90 border-white/20'
             }`}
           >
             {activePanel === 'categories' ? 'Close' : 'Categories'}
           </button>
           <button 
             onClick={() => setActivePanel(activePanel === 'about' ? 'none' : 'about')}
-            className={`px-3.5 py-1.5 rounded-full backdrop-blur-md text-[10px] tracking-widest uppercase font-medium border transition-all ${
-              activePanel === 'about' ? 'bg-secondary text-brand-bg border-secondary shadow-lg' : 'bg-black/50 text-white/90 border-white/20'
+            className={`[writing-mode:vertical-rl] rotate-180 px-2 py-3 rounded-md backdrop-blur-md text-[9px] tracking-[0.2em] uppercase font-bold border transition-all ${
+              activePanel === 'about' ? 'bg-secondary text-brand-bg border-secondary shadow-xl' : 'bg-black/70 text-white/90 border-white/20'
             }`}
           >
             {activePanel === 'about' ? 'Close' : 'About'}
@@ -247,8 +247,18 @@ export default function Home() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.6, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-[#141517] z-30 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden pb-16 md:pb-0"
+              className="absolute inset-0 bg-[#141517] z-50 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden pb-16 md:pb-0"
             >
+              {/* High-Visibility Fixed Close Button */}
+              <button 
+                onClick={() => setActivePanel('none')}
+                className="fixed top-5 right-5 z-50 flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 border border-secondary"
+                aria-label="Close Categories Panel"
+              >
+                <CloseIcon size={16} />
+                <span>CLOSE</span>
+              </button>
+
               {CATEGORIES.map((cat, i) => (
                 <Link 
                   to="/experience" 
@@ -276,8 +286,18 @@ export default function Home() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.6, ease: 'easeInOut' }}
-              className="absolute inset-0 bg-[#0d0e12] z-30 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden"
+              className="absolute inset-0 bg-[#0d0e12] z-50 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden"
             >
+              {/* High-Visibility Fixed Close Button */}
+              <button 
+                onClick={() => setActivePanel('none')}
+                className="fixed top-5 right-5 z-50 flex items-center space-x-2 bg-secondary text-brand-bg px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase shadow-2xl hover:bg-white transition-all active:scale-95 border border-secondary"
+                aria-label="Close About Panel"
+              >
+                <CloseIcon size={16} />
+                <span>CLOSE</span>
+              </button>
+
               <div className="w-full md:w-1/2 min-h-[220px] md:h-full relative overflow-hidden shrink-0">
                 <img src={IMAGES.about} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
               </div>
