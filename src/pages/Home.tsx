@@ -286,31 +286,30 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex-1 flex flex-col md:flex-row pb-24 md:pb-0">
+              <div className="flex-1 flex flex-col md:flex-row h-[calc(100vh-64px)] overflow-hidden pb-16 md:pb-0">
                 {CATEGORIES.map((cat, i) => (
                   <Link 
                     to="/experience" 
                     key={i} 
                     onClick={() => setActivePanel('none')}
-                    className="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-[#ffffff15] last:border-b-0 md:last:border-r-0 min-h-[140px] md:min-h-0 md:h-full block"
+                    className="flex-1 relative group cursor-pointer overflow-hidden border-b md:border-b-0 md:border-r border-[#ffffff20] last:border-b-0 md:last:border-r-0 min-h-0 h-full block"
                   >
                     <img 
                       src={cat.landscape} 
                       alt={cat.title}
-                      className={`absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 hidden md:block ${cat.position}`} 
+                      className={`absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 hidden md:block ${cat.position}`} 
                       referrerPolicy="no-referrer" 
                     />
                     <img 
                       src={cat.mobile} 
                       alt={cat.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 block md:hidden object-[center_top]" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 block md:hidden object-[center_top]" 
                       referrerPolicy="no-referrer" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c10] via-black/40 to-transparent md:bg-gradient-to-t md:from-[#0b0c10] md:via-black/20 md:to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-700" />
                     
-                    <div className="absolute bottom-4 md:bottom-12 left-4 md:left-8 pr-12 md:pr-24 flex flex-col md:flex-col md:justify-end md:items-start z-10 transition-transform duration-500 transform group-hover:-translate-y-2">
-                      <span className="text-2xl md:text-5xl font-bold text-white/40 mb-1 md:mb-4 group-hover:text-secondary group-hover:drop-shadow-lg transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{(i + 1).toString().padStart(2, '0')}</span>
-                      <span className="text-sm md:text-2xl font-sans font-bold leading-tight group-hover:text-white transition-colors duration-500 [text-shadow:_0_2px_10px_rgb(0_0_0_/_80%)]">{cat.title}</span>
+                    <div className="absolute inset-0 flex flex-col justify-center md:justify-end p-3 sm:p-4 md:p-8 md:bottom-12 z-10">
+                      <span className="text-lg sm:text-xl md:text-5xl font-extrabold text-white/90 mb-0.5 md:mb-4 group-hover:text-secondary transition-colors duration-300 [text-shadow:_0_2px_8px_rgba(0,0,0,0.95),_0_4px_16px_rgba(0,0,0,0.9)]">{(i + 1).toString().padStart(2, '0')}</span>
+                      <span className="text-xs sm:text-sm md:text-2xl font-sans font-bold leading-tight text-white group-hover:text-secondary transition-colors duration-300 [text-shadow:_0_2px_8px_rgba(0,0,0,0.95),_0_4px_16px_rgba(0,0,0,0.9)]">{cat.title}</span>
                     </div>
                   </Link>
                 ))}
