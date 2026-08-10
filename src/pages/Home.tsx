@@ -33,7 +33,7 @@ const SLIDES = [
 ];
 
 const CATEGORIES = [
-  { title: "Luxury Bridal Makeup", image: "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w800", position: "object-[80%_center]" },
+  { title: "Luxury Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080", position: "object-[center_top]" },
   { title: "HD Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w800", position: "object-[center_top]" },
   { title: "Airbrush Bridal Makeup", image: "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800", position: "object-[65%_top]" },
   { title: "Engagement & Reception Styling", image: "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800", position: "object-center" },
