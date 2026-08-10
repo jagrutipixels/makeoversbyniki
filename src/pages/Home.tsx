@@ -358,10 +358,10 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex-1 flex flex-col md:flex-row h-auto md:h-[calc(100vh-64px)] overflow-hidden">
-                {/* Left Column: Framed Portrait Image Card */}
-                <div className="w-full md:w-1/2 p-6 md:p-10 flex items-center justify-center bg-[#0a0b0e]">
-                  <div className="relative w-full max-w-md aspect-[3/4] max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+              <div className="flex-1 flex flex-col md:flex-row h-[calc(100vh-64px)] overflow-hidden pb-16 md:pb-0">
+                {/* Left Column: Framed Portrait Image Card (Compact on Mobile) */}
+                <div className="w-full md:w-1/2 p-3 sm:p-4 md:p-10 flex items-center justify-center bg-[#0a0b0e] shrink-0">
+                  <div className="relative w-[160px] sm:w-[200px] md:w-full md:max-w-md aspect-[4/3] md:aspect-[3/4] max-h-[130px] sm:max-h-[160px] md:max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
                       src={IMAGES.about} 
                       alt="Niki - Makeup Artist"
@@ -371,14 +371,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Right Column: Top-Aligned Text Card */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 py-8 md:py-12 relative bg-[#111216] overflow-y-auto">
-                  <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-4 font-medium">About Me</p>
-                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-3 md:mb-5 text-white drop-shadow-sm">
+                {/* Right Column: Top-Aligned Text Card (Compact Fit for Mobile 0-Scroll) */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center px-5 sm:px-6 md:px-16 py-3 md:py-12 relative bg-[#111216] flex-1 overflow-hidden">
+                  <p className="text-secondary tracking-widest text-[10px] sm:text-xs md:text-sm uppercase mb-1 md:mb-4 font-medium">About Me</p>
+                  <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-2 md:mb-5 text-white drop-shadow-sm">
                     My name is Niki,<br/>I'm a Makeup Artist.
                   </h2>
-                  <div className="w-8 h-[1px] bg-white/20 mb-4 md:mb-6" />
-                  <p className="text-white/60 leading-relaxed font-light mb-6 md:mb-8 max-w-lg text-xs sm:text-sm md:text-base">
+                  <div className="w-6 md:w-8 h-[1px] bg-white/20 mb-2 md:mb-6" />
+                  <p className="text-white/70 leading-normal md:leading-relaxed font-light mb-3 md:mb-8 max-w-lg text-[11px] sm:text-xs md:text-base line-clamp-4 md:line-clamp-none">
                     The world without beauty will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My transformations are inspired by light, color, creative perspective, techniques & personalities.
                   </p>
                   <Link 
@@ -390,7 +390,7 @@ export default function Home() {
                     <span>&gt;</span>
                   </Link>
 
-                  <div className="absolute -bottom-6 md:-bottom-10 md:left-10 text-[5rem] sm:text-[6rem] md:text-[12rem] font-sans font-black text-white/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
+                  <div className="absolute -bottom-6 md:-bottom-10 md:left-10 text-[4rem] sm:text-[6rem] md:text-[12rem] font-sans font-black text-white/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
                     About
                   </div>
                 </div>
