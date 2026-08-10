@@ -64,12 +64,12 @@ export default function Home() {
     });
   }, []);
 
-  // Auto-scroll / Auto-play hero slides every 8 seconds
+  // Auto-scroll / Auto-play hero slides every 12 seconds
   useEffect(() => {
     if (activePanel !== 'none') return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 8000);
+    }, 12000);
     return () => clearInterval(timer);
   }, [activePanel]);
 
