@@ -49,9 +49,9 @@ const CATEGORIES = [
   },
   { 
     title: "Airbrush Bridal Makeup", 
-    landscape: "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800",
+    landscape: "https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080",
     mobile: "https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080",
-    position: "object-[65%_top]",
+    position: "object-[center_top]",
     mobilePosition: "object-[center_35%]"
   },
   { 
