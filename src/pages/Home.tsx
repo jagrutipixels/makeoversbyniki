@@ -177,33 +177,35 @@ export default function Home() {
               referrerPolicy="no-referrer"
               loading={currentSlide === 0 ? "eager" : "lazy"}
             />
-            {/* Concentrated left dark shadow for text readability; subject/bride on right stays 100% bright & clear */}
-            <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-black/85 via-black/50 to-transparent pointer-events-none z-[1]" />
-            <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent pointer-events-none z-[1]" />
+            {/* Gradient Overlays: Top-focused dark shadow on mobile for top-centered text; Left-focused shadow on desktop */}
+            <div className="absolute top-0 inset-x-0 h-48 bg-gradient-to-b from-black/90 via-black/50 to-transparent block md:hidden pointer-events-none z-[1]" />
+            <div className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black/85 via-black/50 to-transparent hidden md:block pointer-events-none z-[1]" />
+            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent pointer-events-none z-[1]" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Text Area for Slider */}
-        <div className="absolute inset-y-0 left-0 right-0 md:right-32 flex flex-col justify-end pb-24 sm:pb-32 md:pb-40 px-6 sm:px-8 md:pl-16 md:pr-24 z-10 pointer-events-none">
+        {/* Text Area for Slider: Top-Centered on Mobile, Bottom-Left on Desktop */}
+        <div className="absolute inset-0 flex flex-col justify-start pt-6 md:justify-end md:pb-40 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
+              exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.8 }}
-              className="pointer-events-auto"
+              className="pointer-events-auto flex flex-col items-center text-center md:items-start md:text-left"
             >
-              <div className="flex items-center space-x-2.5 md:space-x-4 mb-3 md:mb-6">
-                <div className="w-5 md:w-8 h-[1px] bg-secondary" />
-                <span className="text-secondary tracking-[0.25em] text-[11px] sm:text-xs md:text-sm uppercase font-medium drop-shadow-md">{SLIDES[currentSlide].subtitle}</span>
+              <div className="flex items-center justify-center md:justify-start space-x-2.5 md:space-x-4 mb-2 md:mb-6">
+                <div className="w-4 md:w-8 h-[1px] bg-secondary" />
+                <span className="text-secondary tracking-[0.25em] text-[10px] sm:text-xs md:text-sm uppercase font-medium drop-shadow-md">{SLIDES[currentSlide].subtitle}</span>
+                <div className="w-4 h-[1px] bg-secondary md:hidden" />
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.18] mb-4 md:mb-8 text-white max-w-2xl sm:max-w-3xl drop-shadow-2xl tracking-tight [text-shadow:_0_2px_15px_rgb(0_0_0_/_70%)]">
+              <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.2] mb-3 md:mb-8 text-white max-w-xs sm:max-w-xl md:max-w-3xl drop-shadow-2xl tracking-tight [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%)]">
                 {SLIDES[currentSlide].title.split('\n').map((line, i) => <div key={i}>{line}</div>) }
               </h1>
               <Link 
                 to="/experience" 
-                className="inline-flex items-center text-secondary hover:text-white uppercase tracking-[0.2em] text-xs md:text-sm font-semibold transition-colors drop-shadow-md py-1"
+                className="inline-flex items-center text-secondary hover:text-white uppercase tracking-[0.2em] text-[11px] md:text-sm font-semibold transition-colors drop-shadow-md py-1"
               >
                 {SLIDES[currentSlide].linkText}
               </Link>
