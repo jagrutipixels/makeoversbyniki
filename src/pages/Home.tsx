@@ -363,9 +363,9 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="flex-1 flex flex-col md:flex-row h-[calc(100vh-64px)] overflow-hidden pb-16 md:pb-0">
-                {/* Left Column: Framed Image Card (16:9 Mobile, 3:4 Desktop) */}
-                <div className="w-full md:w-1/2 p-3 sm:p-4 md:p-10 flex items-center justify-center bg-[#0a0b0e] shrink-0">
+              <div className="flex-1 flex flex-col md:flex-row h-[calc(100vh-64px)] overflow-hidden pb-16 md:pb-0 bg-[#0d0e12]">
+                {/* Left Column: Image Container (Full-Width 16:9 Banner on Mobile, 3:4 Card on Desktop) */}
+                <div className="w-full md:w-1/2 p-4 md:p-10 flex items-center justify-center shrink-0">
                   {/* Desktop Image (3:4 Portrait) */}
                   <div className="hidden md:block relative w-full max-w-md aspect-[3/4] max-h-[calc(100vh-140px)] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
@@ -375,8 +375,8 @@ export default function Home() {
                       referrerPolicy="no-referrer" 
                     />
                   </div>
-                  {/* Mobile Image (3:4 Portrait Card) */}
-                  <div className="block md:hidden relative h-[180px] sm:h-[210px] aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border border-white/10">
+                  {/* Mobile Image (Full-Width 16:9 Landscape Banner) */}
+                  <div className="block md:hidden relative w-full aspect-[16/9] max-h-[170px] rounded-lg overflow-hidden shadow-2xl border border-white/10">
                     <img 
                       src="https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080" 
                       alt="Niki - Makeup Artist Mobile"
@@ -386,14 +386,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Right Column: Top-Aligned Text Card (Compact Fit for Mobile 0-Scroll) */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-5 sm:px-6 md:px-16 py-3 md:py-12 relative bg-[#111216] flex-1 overflow-hidden">
-                  <p className="text-secondary tracking-widest text-[10px] sm:text-xs md:text-sm uppercase mb-1 md:mb-4 font-medium">About Me</p>
-                  <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-2 md:mb-5 text-white drop-shadow-sm">
+                {/* Right Column: Text Card (Seamlessly Connected for Mobile 0-Scroll) */}
+                <div className="w-full md:w-1/2 flex flex-col justify-start md:justify-center px-6 md:px-16 pt-1 md:pt-12 pb-6 md:pb-12 relative flex-1 overflow-hidden">
+                  <p className="text-secondary tracking-widest text-xs uppercase mb-1 md:mb-4 font-medium">About Me</p>
+                  <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-2 md:mb-5 text-white drop-shadow-sm">
                     My name is Niki,<br/>I'm a Makeup Artist.
                   </h2>
-                  <div className="w-6 md:w-8 h-[1px] bg-white/20 mb-2 md:mb-6" />
-                  <p className="text-white/70 leading-normal md:leading-relaxed font-light mb-3 md:mb-8 max-w-lg text-[11px] sm:text-xs md:text-base line-clamp-4 md:line-clamp-none">
+                  <div className="w-8 h-[1px] bg-white/20 mb-3 md:mb-6" />
+                  <p className="text-white/70 leading-relaxed font-light mb-4 md:mb-8 max-w-lg text-xs sm:text-sm md:text-base">
                     The world without beauty will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My transformations are inspired by light, color, creative perspective, techniques & personalities.
                   </p>
                   <Link 
