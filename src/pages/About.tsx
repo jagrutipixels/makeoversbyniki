@@ -24,7 +24,7 @@ export default function About() {
           className="lg:col-span-5 relative aspect-[4/5] sm:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10"
         >
           <img 
-            src={IMAGES.about} 
+            src="https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080" 
             alt="Niki working" 
             className="w-full h-full object-cover object-[center_top]"
             referrerPolicy="no-referrer"
