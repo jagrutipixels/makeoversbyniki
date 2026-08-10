@@ -26,7 +26,7 @@ export default function About() {
           <img 
             src="https://drive.google.com/thumbnail?id=16jm3M4yKMSh3LN0XPi7E-RjRhtRIEVgh&sz=w1080" 
             alt="Niki working" 
-            className="w-full h-full object-cover object-[center_top]"
+            className="w-full h-full object-cover object-[center_55%]"
             referrerPolicy="no-referrer"
           />
         </motion.div>
