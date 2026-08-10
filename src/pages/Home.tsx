@@ -334,24 +334,25 @@ export default function Home() {
                 <div className="w-full md:w-1/2 min-h-[260px] md:h-full relative overflow-hidden shrink-0">
                   <img src={IMAGES.about} className="w-full h-full object-cover opacity-80" referrerPolicy="no-referrer" />
                 </div>
-                <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 py-8 relative bg-[#111216] overflow-y-auto overflow-x-hidden">
-                  <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-3 md:mb-6 mt-2 md:mt-0 font-medium">About Me</p>
-                  <h2 className="text-2xl md:text-5xl lg:text-6xl font-sans font-bold leading-tight mb-4 md:mb-8 text-white drop-shadow-sm">
+                <div className="w-full md:w-1/2 flex flex-col justify-start px-6 md:px-16 pt-6 md:pt-12 lg:pt-16 pb-8 relative bg-[#111216] overflow-y-auto overflow-x-hidden">
+                  <p className="text-secondary tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-4 font-medium">About Me</p>
+                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-sans font-bold leading-tight mb-3 md:mb-6 text-white drop-shadow-sm">
                     My name is Niki,<br/>I'm a Makeup Artist.
                   </h2>
-                  <div className="w-8 h-[1px] bg-white/20 mb-6" />
-                  <p className="text-white/60 leading-relaxed font-light mb-8 max-w-lg text-sm md:text-base">
+                  <div className="w-8 h-[1px] bg-white/20 mb-4 md:mb-6" />
+                  <p className="text-white/60 leading-relaxed font-light mb-6 md:mb-8 max-w-lg text-xs sm:text-sm md:text-base">
                     The world without beauty will be meaningless to us if there is no light and color, which opens up our minds and expresses passion. My transformations are inspired by light, color, creative perspective, techniques & personalities.
                   </p>
                   <Link 
                     to="/about" 
                     onClick={() => setActivePanel('none')}
-                    className="inline-flex text-secondary text-sm font-semibold tracking-widest uppercase hover:text-white transition-colors select-none mb-6"
+                    className="inline-flex items-center space-x-2 text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase hover:text-white transition-colors select-none"
                   >
-                    READ MORE &gt;
+                    <span>READ MORE</span>
+                    <span>&gt;</span>
                   </Link>
 
-                  <div className="absolute -bottom-8 md:-bottom-12 md:left-10 text-[5rem] sm:text-[6rem] md:text-[14rem] font-sans font-black text-white/[0.04] select-none pointer-events-none tracking-tighter overflow-hidden">
+                  <div className="absolute -bottom-8 md:-bottom-12 md:left-10 text-[5rem] sm:text-[6rem] md:text-[14rem] font-sans font-black text-white/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
                     About
                   </div>
                 </div>
