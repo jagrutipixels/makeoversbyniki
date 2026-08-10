@@ -1,128 +1,235 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
-import { IMAGES } from '../data';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', 'Details'];
+const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', 'Artistry'];
+
+const PORTFOLIO_ITEMS = [
+  // Bridal
+  { id: '1', title: 'Royal Heritage Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w1080' },
+  { id: '2', title: 'Editorial South Asian Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1080' },
+  { id: '3', title: 'Classic Velvet Bridal Glam', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1pKCtWb4A_CPJcI4UeOBWqAnIl_XnYLfv&sz=w1080' },
+  { id: '4', title: 'Regal Gold Kundan Look', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=19FYB0a5sSEVcn8Vfq933oABEXC-PnnOF&sz=w1080' },
+  { id: '5', title: 'Contemporary Crimson Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1QE0eedAxgy2hFSkqdGukXo6kh9vuJADM&sz=w1080' },
+  { id: '6', title: 'Opulent Palace Bridal Look', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1hU2ePiAdhESb9YqX2ZPB0QAjOhGGieWy&sz=w1080' },
+  { id: '7', title: 'Timeless Traditional Elegance', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1hzPHtKvgOlLlK2VyDhNTt9fXYopmtGkB&sz=w1080' },
+  { id: '8', title: 'Sleek Modern Bridal Glow', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1kc5bWqA_qoaEIqB6mvMbMXdjXP5RwovB&sz=w1080' },
+  { id: '9', title: 'Grand Royal Ceremony Look', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1080' },
+  { id: '10', title: 'Portrait of Elegance', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1P8LQpXOfVL6EtGcvhgB6LyB_erM310qv&sz=w1080' },
+  { id: '11', title: 'High-Fashion Bridal Feature', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1080' },
+  { id: '12', title: 'Radiant Bridal Majesty', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080' },
+
+  // Engagement
+  { id: '13', title: 'Sun-Kissed Engagement Look', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w1080' },
+  { id: '14', title: 'Pastel Garden Engagement', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080' },
+  { id: '15', title: 'Chic Evening Engagement', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w1080' },
+  { id: '16', title: 'Delicate Floral Sangeet Look', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080' },
+  { id: '17', title: 'Sophisticated Pre-Wedding Glam', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1QnWu7oudp07eTubCyA-7jC1xbRcDTaeb&sz=w1080' },
+  { id: '18', title: 'Luminous Sunset Ceremony', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=19LwcHjLpnn4Xijr4VgeN3cM_LHQ4wSHx&sz=w1080' },
+  { id: '19', title: 'Graceful Floral Couture', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1PQgoq6Ncl--YSqvVN3tEynQzlme1-7dy&sz=w1080' },
+
+  // Reception
+  { id: '20', title: 'Airbrush Bridal Perfection', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080' },
+  { id: '21', title: 'Glistening Reception Glam', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080' },
+  { id: '22', title: 'High-HD Reception Finish', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w1080' },
+  { id: '23', title: 'Midnight Starlight Couture', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1AkVxp61Nbiq7_tMPbz1RXgFVZfEBdBD2&sz=w1080' },
+  { id: '24', title: 'Glamorous Evening Gala', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1ebPsYAv2XV_BheDtxNUSIni6eCfJxncy&sz=w1080' },
+  { id: '25', title: 'Natural Glow Transformation', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1SomkXXqIMtfDOQ0GS5XAlrEEsuBkFzDu&sz=w1080' },
+  { id: '26', title: 'Sculpted HD Beauty', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1u9jr6vQuVkU0BvSng5616hkemuB20O95&sz=w1080' },
+
+  // Destination
+  { id: '27', title: 'Udaipur Palace Destination', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1080' },
+  { id: '28', title: 'Lake Como Villa Bride', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w1080' },
+  { id: '29', title: 'Beachside Royal Sunset', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080' },
+  { id: '30', title: 'Dubai Luxury Resort Wedding', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1080' },
+  { id: '31', title: 'Tropical Oasis Bridal Look', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080' },
+  { id: '32', title: 'Destination Sunset Radiance', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1ZpyRzgZBj8_vzgFua-Q9gBLAZisO60SW&sz=w1080' },
+
+  // Artistry
+  { id: '33', title: 'Niki Artistry Portrait', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=16jm3M4yKMSh3LN0XPi7E-RjRhtRIEVgh&sz=w1080' },
+  { id: '34', title: 'Jewelry Styling Precision', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080' },
+  { id: '35', title: 'Eye Makeup Masterclass', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080' },
+  { id: '36', title: 'Bridal Preparation Studio', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1zhmnxlQS1iuk77C_2n6GOgGmUKyJMLUq&sz=w1080' },
+  { id: '37', title: 'Signature Bridal Touch', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1r_juGdUhZHbj6senueHky8PKM5EhqCpR&sz=w1080' },
+];
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const allPortfolioImages = useMemo(() => [
-    { src: IMAGES.portfolio[0], category: 'Bridal' },
-    { src: IMAGES.portfolio[1], category: 'Engagement' },
-    { src: IMAGES.portfolio[2], category: 'Reception' },
-    { src: IMAGES.portfolio[3], category: 'Destination' },
-    { src: IMAGES.portfolio[4], category: 'Bridal' }
-  ], []);
+  const filteredItems = useMemo(() => {
+    if (activeFilter === 'All') return PORTFOLIO_ITEMS;
+    return PORTFOLIO_ITEMS.filter(item => item.category === activeFilter);
+  }, [activeFilter]);
 
-  const filterImages = (item: {src: string, category: string}) => {
-    if (activeFilter === 'All') return true;
-    return item.category === activeFilter;
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % filteredItems.length);
+    }
   };
 
-  const displayImages = allPortfolioImages.filter(filterImages);
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + filteredItems.length) % filteredItems.length);
+    }
+  };
 
   return (
     <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-24 min-h-screen">
       <Helmet>
-        <title>Luxury Bridal Makeup Portfolio | HNI Indian & Global Weddings | Makeovers by Niki</title>
-        <meta name="description" content="Explore our curated portfolio of luxury bridal makeup transformations. Exclusive, high-profile beauty services for HNI brides, royal Indian weddings, and global destinations." />
+        <title>Luxury Bridal Portfolio | 37 Exclusive Transformations | Makeovers by Niki</title>
+        <meta name="description" content="Explore our complete gallery of 37 unique luxury bridal makeup transformations across India and global wedding destinations." />
       </Helmet>
 
-
-
-      <header className="max-w-4xl mx-auto text-center px-6 mb-16">
-        <h4 className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6">The Galleries</h4>
-        <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-8">
+      {/* Header */}
+      <header className="max-w-4xl mx-auto text-center px-6 mb-12 md:mb-16">
+        <span className="uppercase tracking-[0.3em] text-secondary text-xs sm:text-sm font-medium mb-3 block">
+          Curated Archives
+        </span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-primary leading-tight mb-6">
           The <span className="italic">Portfolio</span>
         </h1>
-        <p className="text-primary/70 font-light text-lg max-w-2xl mx-auto">
-          A curated selection of our favorite editorial and real bride moments across India and luxury destinations worldwide.
+        <p className="text-primary/70 font-light text-base sm:text-lg max-w-2xl mx-auto">
+          A collection of 37 unique luxury bridal looks, editorial moments, and destination weddings styled by Niki across India and internationally.
         </p>
       </header>
 
-      {/* Filters */}
-      <div className="max-w-7xl mx-auto px-6 mb-16 flex flex-wrap justify-center gap-6">
-        {CATEGORIES.map(cat => (
-          <button
-            key={cat}
-            onClick={() => setActiveFilter(cat)}
-            className={`uppercase tracking-widest text-xs font-medium transition-all duration-300 pb-1 border-b-2 
-              ${activeFilter === cat ? 'border-secondary text-primary' : 'border-transparent text-primary/50 hover:text-primary'}
-            `}
-          >
-            {cat}
-          </button>
-        ))}
+      {/* Category Filter Tabs */}
+      <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-wrap justify-center gap-3 sm:gap-6">
+        {CATEGORIES.map(cat => {
+          const count = cat === 'All' ? PORTFOLIO_ITEMS.length : PORTFOLIO_ITEMS.filter(i => i.category === cat).length;
+          return (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`uppercase tracking-widest text-xs font-medium transition-all duration-300 px-3.5 py-2 rounded-full border ${
+                activeFilter === cat 
+                  ? 'bg-secondary text-brand-bg border-secondary shadow-md' 
+                  : 'bg-white/5 text-primary/70 border-white/10 hover:border-secondary/50 hover:text-white'
+              }`}
+            >
+              {cat} <span className="text-[10px] opacity-75">({count})</span>
+            </button>
+          );
+        })}
       </div>
 
-      {/* Grid Layout */}
-      <div className="max-w-[1600px] mx-auto px-6 relative min-h-[50vh]">
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {/* Refined Responsive Grid */}
+      <div className="max-w-[1600px] mx-auto px-6">
+        <motion.div layout className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           <AnimatePresence>
-            {displayImages.map((img, idx) => (
+            {filteredItems.map((item, idx) => (
               <motion.div
-                key={img.src + idx}
+                key={item.id}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5 }}
-                className="relative overflow-hidden group cursor-zoom-in rounded-sm shadow-sm aspect-[4/5]"
-                onClick={() => setSelectedImage(img.src)}
+                transition={{ duration: 0.4 }}
+                className="relative overflow-hidden group cursor-zoom-in rounded-sm border border-white/10 shadow-lg aspect-[3/4] bg-[#111216]"
+                onClick={() => setSelectedIndex(idx)}
               >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-end p-6">
-                  <span className="text-white text-sm tracking-widest uppercase font-medium drop-shadow-md translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{img.category}</span>
-                </div>
+                {/* Background Image */}
                 <img 
-                  src={img.src} 
-                  alt={`${img.category} Portfolio Piece`} 
-                  className="w-full h-full object-cover object-[center_top] md:object-center transform group-hover:scale-105 transition-transform duration-700"
+                  src={item.src} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover object-[center_top] transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
+
+                {/* Subtle Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-end p-4 md:p-6">
+                  <span className="text-secondary text-[10px] md:text-xs tracking-[0.2em] uppercase font-semibold mb-1">
+                    {item.category}
+                  </span>
+                  <h4 className="text-white font-serif text-sm md:text-lg leading-snug">
+                    {item.title}
+                  </h4>
+                </div>
+
+                {/* Always-visible category pill on mobile */}
+                <div className="absolute top-3 left-3 md:hidden z-10 bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded-full text-[9px] uppercase tracking-wider text-secondary border border-secondary/20">
+                  {item.category}
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
-        
-        {displayImages.length === 0 && (
+
+        {filteredItems.length === 0 && (
           <div className="text-center py-32 text-primary/50 font-serif text-2xl italic">
-            Expanding our archives. Check back soon.
+            No looks found in this category.
           </div>
         )}
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal with Next / Prev Navigation */}
       <AnimatePresence>
-        {selectedImage && (
+        {selectedIndex !== null && filteredItems[selectedIndex] && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 px-4"
-            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/95 px-4 md:px-12 backdrop-blur-md"
+            onClick={() => setSelectedIndex(null)}
           >
+            {/* Close Button */}
             <button 
-              className="absolute top-6 right-6 text-white/70 hover:text-white pb-1"
-              onClick={() => setSelectedImage(null)}
+              className="absolute top-6 right-6 z-30 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors flex items-center justify-center"
+              onClick={() => setSelectedIndex(null)}
+              aria-label="Close Preview"
             >
-              <span className="uppercase tracking-widest text-xs">Close</span>
+              <X className="w-6 h-6" />
             </button>
-            <motion.img 
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              src={selectedImage}
-              alt="Expanded view"
-              className="max-w-full max-h-[90vh] object-contain shadow-2xl"
-              referrerPolicy="no-referrer"
-            />
+
+            {/* Left Prev Arrow */}
+            <button
+              className="absolute left-4 md:left-8 z-30 p-3 bg-white/10 hover:bg-secondary hover:text-brand-bg text-white rounded-full transition-all duration-300"
+              onClick={handlePrev}
+              aria-label="Previous Image"
+            >
+              <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+            </button>
+
+            {/* Right Next Arrow */}
+            <button
+              className="absolute right-4 md:right-8 z-30 p-3 bg-white/10 hover:bg-secondary hover:text-brand-bg text-white rounded-full transition-all duration-300"
+              onClick={handleNext}
+              aria-label="Next Image"
+            >
+              <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+            </button>
+
+            {/* Main Lightbox Content */}
+            <div 
+              className="relative max-w-4xl max-h-[85vh] flex flex-col items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <motion.img 
+                key={filteredItems[selectedIndex].id}
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.95, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                src={filteredItems[selectedIndex].src}
+                alt={filteredItems[selectedIndex].title}
+                className="max-w-full max-h-[75vh] object-contain rounded-sm shadow-2xl border border-white/10"
+                referrerPolicy="no-referrer"
+              />
+
+              <div className="mt-4 text-center">
+                <span className="text-secondary text-xs uppercase tracking-[0.2em] font-medium block mb-1">
+                  {filteredItems[selectedIndex].category} • {selectedIndex + 1} of {filteredItems.length}
+                </span>
+                <h3 className="text-white font-serif text-xl md:text-2xl">
+                  {filteredItems[selectedIndex].title}
+                </h3>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
