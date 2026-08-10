@@ -1,5 +1,5 @@
-import { useState, lazy, Suspense } from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 import Layout from './components/Layout';
 import SplashScreen from './components/SplashScreen';
@@ -11,6 +11,14 @@ const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Destination = lazy(() => import('./pages/Destination'));
 const Contact = lazy(() => import('./pages/Contact'));
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -21,6 +29,7 @@ export default function App() {
       </AnimatePresence>
 
       <BrowserRouter>
+        <ScrollToTop />
         <Suspense fallback={<div className="h-screen w-screen bg-brand-bg flex items-center justify-center"><span className="text-secondary tracking-widest text-sm uppercase">Loading...</span></div>}>
           <Routes>
             <Route path="/" element={<Layout />}>
