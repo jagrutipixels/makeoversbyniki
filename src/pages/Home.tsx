@@ -128,20 +128,20 @@ export default function Home() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Mobile Vertical Right Side Strip (Equalized tab height h-28 w-8 for uniform symmetry) */}
-        <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-2">
+        {/* Mobile Vertical Right Side Strip (Perfectly aligned in a single straight line along right edge) */}
+        <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-30 flex flex-col items-end space-y-2">
           <button 
             onClick={() => setActivePanel(activePanel === 'categories' ? 'none' : 'categories')}
-            className={`[writing-mode:vertical-rl] rotate-180 h-28 w-8 flex items-center justify-center rounded-l-lg backdrop-blur-md text-[10px] tracking-[0.25em] uppercase font-bold border transition-all ${
-              activePanel === 'categories' ? 'bg-secondary text-brand-bg border-secondary shadow-2xl scale-105' : 'bg-black/80 text-white/90 border-white/20'
+            className={`[writing-mode:vertical-rl] rotate-180 h-28 w-8 flex items-center justify-center rounded-l-md border-r-0 backdrop-blur-md text-[10px] tracking-[0.25em] uppercase font-bold border transition-colors ${
+              activePanel === 'categories' ? 'bg-secondary text-brand-bg border-secondary shadow-2xl' : 'bg-black/85 text-white/90 border-white/20'
             }`}
           >
             {activePanel === 'categories' ? 'Close' : 'Categories'}
           </button>
           <button 
             onClick={() => setActivePanel(activePanel === 'about' ? 'none' : 'about')}
-            className={`[writing-mode:vertical-rl] rotate-180 h-28 w-8 flex items-center justify-center rounded-l-lg backdrop-blur-md text-[10px] tracking-[0.25em] uppercase font-bold border transition-all ${
-              activePanel === 'about' ? 'bg-secondary text-brand-bg border-secondary shadow-2xl scale-105' : 'bg-black/80 text-white/90 border-white/20'
+            className={`[writing-mode:vertical-rl] rotate-180 h-28 w-8 flex items-center justify-center rounded-l-md border-r-0 backdrop-blur-md text-[10px] tracking-[0.25em] uppercase font-bold border transition-colors ${
+              activePanel === 'about' ? 'bg-secondary text-brand-bg border-secondary shadow-2xl' : 'bg-black/85 text-white/90 border-white/20'
             }`}
           >
             {activePanel === 'about' ? 'Close' : 'About'}
