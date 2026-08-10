@@ -34,10 +34,10 @@ const SLIDES = [
 
 const CATEGORIES = [
   { title: "Luxury Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080", position: "object-[center_top]" },
-  { title: "HD Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w800", position: "object-[center_top]" },
-  { title: "Airbrush Bridal Makeup", image: "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800", position: "object-[65%_top]" },
-  { title: "Engagement & Reception Styling", image: "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800", position: "object-center" },
-  { title: "Destination Bridal Experience", image: "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800", position: "object-[30%_center]" }
+  { title: "HD Bridal Makeup", image: "https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080", position: "object-[center_top]" },
+  { title: "Airbrush Bridal Makeup", image: "https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080", position: "object-[center_top]" },
+  { title: "Engagement & Reception Styling", image: "https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080", position: "object-[center_top]" },
+  { title: "Destination Bridal Experience", image: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080", position: "object-[center_top]" }
 ];
 
 export default function Home() {
