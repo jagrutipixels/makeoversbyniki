@@ -320,13 +320,13 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Floating Bottom Go Back Bar for Both Desktop & Mobile */}
-              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+              {/* Floating Bottom Go Back Bar (Compact Single-Line on Mobile) */}
+              <div className="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary hover:bg-white transition-all cursor-pointer"
+                  className="flex items-center space-x-1.5 sm:space-x-2 bg-secondary text-brand-bg px-3.5 sm:px-4 md:px-6 py-2 md:py-3 rounded-full font-bold text-[10px] sm:text-xs md:text-sm tracking-wider md:tracking-widest uppercase shadow-2xl active:scale-95 border md:border-2 border-secondary hover:bg-white transition-all cursor-pointer whitespace-nowrap"
                 >
-                  <ArrowLeft size={18} />
+                  <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 shrink-0" />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
               </div>
@@ -411,13 +411,13 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating Bottom Go Back Bar for Both Desktop & Mobile */}
-              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
+              {/* Floating Bottom Go Back Bar (Compact Single-Line on Mobile) */}
+              <div className="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-[1000]">
                 <button 
                   onClick={() => setActivePanel('none')}
-                  className="flex items-center space-x-2 bg-secondary text-brand-bg px-6 py-3 rounded-full font-bold text-xs md:text-sm tracking-widest uppercase shadow-2xl active:scale-95 border-2 border-secondary hover:bg-white transition-all cursor-pointer"
+                  className="flex items-center space-x-1.5 sm:space-x-2 bg-secondary text-brand-bg px-3.5 sm:px-4 md:px-6 py-2 md:py-3 rounded-full font-bold text-[10px] sm:text-xs md:text-sm tracking-wider md:tracking-widest uppercase shadow-2xl active:scale-95 border md:border-2 border-secondary hover:bg-white transition-all cursor-pointer whitespace-nowrap"
                 >
-                  <ArrowLeft size={18} />
+                  <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 shrink-0" />
                   <span>GO BACK TO HOME PAGE</span>
                 </button>
               </div>
