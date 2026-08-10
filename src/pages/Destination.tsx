@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { IMAGES } from '../data';
 import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const LOCATIONS = ['Goa', 'Jaipur', 'Udaipur', 'Dubai', 'Italy', 'Thailand'];
 
@@ -12,6 +13,17 @@ export default function Destination() {
         <title>Luxury Destination Wedding Makeup Artist | Global & India | Makeovers by Niki</title>
         <meta name="description" content="Seamless luxury destination wedding makeup artistry across India, Dubai, Italy, and beyond. Exclusive bridal packages for HNI and international clientele." />
       </Helmet>
+
+      {/* Navigation Return Link */}
+      <div className="max-w-7xl mx-auto px-6 pt-24 pb-2">
+        <Link 
+          to="/" 
+          className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
+        >
+          <ArrowLeft size={16} />
+          <span>BACK TO HOME</span>
+        </Link>
+      </div>
       <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img 

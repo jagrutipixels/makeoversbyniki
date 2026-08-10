@@ -2,6 +2,8 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { IMAGES } from '../data';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', 'Details'];
 
@@ -25,11 +27,23 @@ export default function Portfolio() {
   const displayImages = allPortfolioImages.filter(filterImages);
 
   return (
-    <div className="bg-brand-bg w-full pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-24 min-h-screen">
       <Helmet>
         <title>Luxury Bridal Makeup Portfolio | HNI Indian & Global Weddings | Makeovers by Niki</title>
         <meta name="description" content="Explore our curated portfolio of luxury bridal makeup transformations. Exclusive, high-profile beauty services for HNI brides, royal Indian weddings, and global destinations." />
       </Helmet>
+
+      {/* Navigation Return Link */}
+      <div className="max-w-7xl mx-auto px-6 mb-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center space-x-2 text-secondary hover:text-primary uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
+        >
+          <ArrowLeft size={16} />
+          <span>BACK TO HOME</span>
+        </Link>
+      </div>
+
       <header className="max-w-4xl mx-auto text-center px-6 mb-16">
         <h4 className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6">The Galleries</h4>
         <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-8">

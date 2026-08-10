@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MessageCircle, ChevronDown, ArrowLeft } from 'lucide-react';
 import { IMAGES } from '../data';
-import { Mail, Phone, MessageCircle, ChevronDown } from 'lucide-react';
 
 const FAQS = [
   {
@@ -39,13 +40,24 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-brand-bg w-full pt-32 pb-24 min-h-screen">
+    <div className="bg-brand-bg w-full pt-16 pb-24 min-h-screen">
       <Helmet>
         <title>Contact | Luxury Bridal Makeup Inquiries | HNI & Destination Weddings</title>
         <meta name="description" content="Inquire about date availability with Makeovers by Niki. Exclusive luxury bridal makeup services for HNI clients and global destination weddings across India and worldwide." />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-6">
+        {/* Navigation Return Link */}
+        <div className="mb-12">
+          <Link 
+            to="/" 
+            className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
+          >
+            <ArrowLeft size={16} />
+            <span>BACK TO HOME</span>
+          </Link>
+        </div>
+
         <div className="text-center mb-20">
           <motion.h4 
             initial={{ opacity: 0, y: 20 }}
