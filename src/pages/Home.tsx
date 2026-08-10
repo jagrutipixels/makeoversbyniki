@@ -60,12 +60,12 @@ export default function Home() {
     };
   }, []);
 
-  // Auto-scroll / Auto-play hero slides every 4 seconds
+  // Auto-scroll / Auto-play hero slides every 8 seconds
   useEffect(() => {
     if (activePanel !== 'none') return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 4000);
+    }, 8000);
     return () => clearInterval(timer);
   }, [activePanel]);
 
