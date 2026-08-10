@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { IMAGES } from '../data';
 import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const SERVICES = [
   {
@@ -32,11 +33,22 @@ const SERVICES = [
 
 export default function Experience() {
   return (
-    <div className="bg-brand-bg w-full pt-24 md:pt-28 pb-20">
+    <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-20">
       <Helmet>
         <title>Signature Bridal Makeup Services | HNI Wedding Experience | Makeovers by Niki</title>
         <meta name="description" content="Discover bespoke luxury bridal services, including flawless HD and Airbrush makeup techniques. Elite wedding beauty experiences tailored for HNI and global brides." />
       </Helmet>
+
+      {/* Navigation Return Link */}
+      <div className="max-w-7xl mx-auto px-6 mb-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
+        >
+          <ArrowLeft size={16} />
+          <span>BACK TO HOME</span>
+        </Link>
+      </div>
 
       {/* Main Hero & Services Section (Side-by-Side Above-The-Fold Layout) */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start pb-20 border-b border-primary/10">
