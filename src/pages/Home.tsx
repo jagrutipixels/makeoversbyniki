@@ -37,31 +37,36 @@ const CATEGORIES = [
     title: "Luxury Bridal Makeup", 
     landscape: "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080",
-    position: "object-[80%_center]" 
+    position: "object-[80%_center]",
+    mobilePosition: "object-[center_top]"
   },
   { 
     title: "HD Bridal Makeup", 
     landscape: "https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080",
-    position: "object-[center_top]" 
+    position: "object-[center_top]",
+    mobilePosition: "object-[center_top]"
   },
   { 
     title: "Airbrush Bridal Makeup", 
     landscape: "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080",
-    position: "object-[65%_top]" 
+    position: "object-[65%_top]",
+    mobilePosition: "object-[center_35%]"
   },
   { 
     title: "Engagement & Reception Styling", 
     landscape: "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080",
-    position: "object-center" 
+    position: "object-center",
+    mobilePosition: "object-[center_top]"
   },
   { 
     title: "Destination Bridal Experience", 
     landscape: "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080",
-    position: "object-[30%_center]" 
+    position: "object-[30%_center]",
+    mobilePosition: "object-[center_top]"
   }
 ];
 
@@ -303,7 +308,7 @@ export default function Home() {
                     <img 
                       src={cat.mobile} 
                       alt={cat.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 block md:hidden object-[center_top]" 
+                      className={`absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700 block md:hidden ${cat.mobilePosition || 'object-[center_top]'}`} 
                       referrerPolicy="no-referrer" 
                     />
                     
