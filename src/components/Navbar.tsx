@@ -63,25 +63,14 @@ export default function Navbar() {
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out ${navBackground}`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-24 flex items-center justify-between">
-          <div className="flex items-center space-x-6 z-50">
-            <Link to="/" className="flex items-center">
-              <img 
-                src={LOGO_URL}
-                alt="Makeovers by Niki"
-                className="h-16 md:h-24 py-1 md:py-2 block w-auto object-contain transition-all duration-300"
-                referrerPolicy="no-referrer"
-              />
-            </Link>
-            {!isHome && (
-              <Link 
-                to="/" 
-                className="hidden md:inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-bold transition-all py-1.5 px-4 rounded-full border border-secondary/40 hover:border-secondary hover:bg-secondary/10 shadow-lg active:scale-95"
-              >
-                <ArrowLeft size={16} />
-                <span>GO BACK TO HOME</span>
-              </Link>
-            )}
-          </div>
+          <Link to="/" className="flex items-center z-50">
+            <img 
+              src={LOGO_URL}
+              alt="Makeovers by Niki"
+              className="h-16 md:h-24 py-1 md:py-2 block w-auto object-contain transition-all duration-300"
+              referrerPolicy="no-referrer"
+            />
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-8">

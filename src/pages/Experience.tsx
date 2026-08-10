@@ -39,16 +39,7 @@ export default function Experience() {
         <meta name="description" content="Discover bespoke luxury bridal services, including flawless HD and Airbrush makeup techniques. Elite wedding beauty experiences tailored for HNI and global brides." />
       </Helmet>
 
-      {/* Navigation Return Link */}
-      <div className="max-w-7xl mx-auto px-6 mb-6">
-        <Link 
-          to="/" 
-          className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
-        >
-          <ArrowLeft size={16} />
-          <span>BACK TO HOME</span>
-        </Link>
-      </div>
+
 
       {/* Main Hero & Services Section (Side-by-Side Above-The-Fold Layout) */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start pb-20 border-b border-primary/10">

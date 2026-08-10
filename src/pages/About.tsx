@@ -12,16 +12,7 @@ export default function About() {
         <meta name="description" content="Discover the artistry of Niki, a premier luxury bridal makeup artist with decades of global expertise. Creating timeless beauty for elite HNI clients across India and internationally." />
       </Helmet>
 
-      {/* Navigation Return Link */}
-      <div className="max-w-7xl mx-auto px-6 mb-6">
-        <Link 
-          to="/" 
-          className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
-        >
-          <ArrowLeft size={16} />
-          <span>BACK TO HOME</span>
-        </Link>
-      </div>
+
 
       {/* Main Hero & Story Section (Side-by-Side Layout) */}
       <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">

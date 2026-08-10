@@ -47,16 +47,7 @@ export default function Contact() {
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-6">
-        {/* Navigation Return Link */}
-        <div className="mb-12">
-          <Link 
-            to="/" 
-            className="inline-flex items-center space-x-2 text-secondary hover:text-white uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
-          >
-            <ArrowLeft size={16} />
-            <span>BACK TO HOME</span>
-          </Link>
-        </div>
+
 
         <div className="text-center mb-20">
           <motion.h4 

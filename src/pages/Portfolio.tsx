@@ -33,16 +33,7 @@ export default function Portfolio() {
         <meta name="description" content="Explore our curated portfolio of luxury bridal makeup transformations. Exclusive, high-profile beauty services for HNI brides, royal Indian weddings, and global destinations." />
       </Helmet>
 
-      {/* Navigation Return Link */}
-      <div className="max-w-7xl mx-auto px-6 mb-6">
-        <Link 
-          to="/" 
-          className="inline-flex items-center space-x-2 text-secondary hover:text-primary uppercase tracking-[0.2em] text-xs font-semibold transition-colors py-2"
-        >
-          <ArrowLeft size={16} />
-          <span>BACK TO HOME</span>
-        </Link>
-      </div>
+
 
       <header className="max-w-4xl mx-auto text-center px-6 mb-16">
         <h4 className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6">The Galleries</h4>
