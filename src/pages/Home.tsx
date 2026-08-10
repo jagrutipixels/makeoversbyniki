@@ -424,13 +424,13 @@ export default function Home() {
       <div className="hidden md:flex md:w-20 border-l border-white/10 flex-col items-center justify-center h-full z-50 bg-black/50 backdrop-blur-md shrink-0">
         <div className="flex flex-col items-center space-y-12">
           {activePanel === 'categories' ? (
-            <button onClick={() => setActivePanel('none')} className="flex items-center hover:text-white transition-colors group">
-              <span className="[writing-mode:vertical-rl] rotate-180 flex items-center text-xs tracking-widest font-medium uppercase text-white/70 group-hover:text-white transition-colors">
-                <CloseIcon size={14} className="mb-2" /> CLOSE
+            <button onClick={() => setActivePanel('none')} className="flex items-center hover:text-white transition-colors group cursor-pointer">
+              <span className="[writing-mode:vertical-rl] rotate-180 flex items-center text-xs tracking-widest font-bold uppercase text-secondary group-hover:text-white transition-colors">
+                <ArrowLeft size={14} className="mb-2" /> GO BACK
               </span>
             </button>
           ) : (
-            <button onClick={() => setActivePanel('categories')} className="group">
+            <button onClick={() => setActivePanel('categories')} className="group cursor-pointer">
               <span className="[writing-mode:vertical-rl] rotate-180 text-xs tracking-widest font-medium uppercase text-white/50 group-hover:text-white transition-colors">CATEGORIES</span>
             </button>
           )}
@@ -438,13 +438,13 @@ export default function Home() {
           <div className="w-1 h-1 rounded-full bg-secondary"></div>
 
           {activePanel === 'about' ? (
-            <button onClick={() => setActivePanel('none')} className="flex items-center hover:text-white transition-colors group">
-              <span className="[writing-mode:vertical-rl] rotate-180 flex items-center text-xs tracking-widest font-medium uppercase text-white/70 group-hover:text-white transition-colors">
-                <CloseIcon size={14} className="mb-2" /> CLOSE
+            <button onClick={() => setActivePanel('none')} className="flex items-center hover:text-white transition-colors group cursor-pointer">
+              <span className="[writing-mode:vertical-rl] rotate-180 flex items-center text-xs tracking-widest font-bold uppercase text-secondary group-hover:text-white transition-colors">
+                <ArrowLeft size={14} className="mb-2" /> GO BACK
               </span>
             </button>
           ) : (
-            <button onClick={() => setActivePanel('about')} className="group">
+            <button onClick={() => setActivePanel('about')} className="group cursor-pointer">
               <span className="[writing-mode:vertical-rl] rotate-180 text-xs tracking-widest font-medium uppercase text-white/50 group-hover:text-white transition-colors hover:text-secondary">ABOUT</span>
             </button>
           )}
