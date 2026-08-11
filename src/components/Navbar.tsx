@@ -63,13 +63,16 @@ export default function Navbar() {
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out ${navBackground}`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-24 flex items-center justify-between">
-          <Link to="/" className="flex items-center z-50">
+          <Link to="/" className="flex items-center space-x-2.5 sm:space-x-3 z-50 group">
             <img 
               src={LOGO_URL}
               alt="Makeovers by Niki"
-              className="h-16 md:h-24 py-1 md:py-2 block w-auto object-contain transition-all duration-300"
+              className="h-12 sm:h-14 md:h-18 py-1 block w-auto object-contain transition-all duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
+            <span className="font-serif tracking-[0.18em] text-secondary text-[11px] sm:text-xs md:text-sm uppercase font-semibold whitespace-nowrap">
+              MAKEOVERS BY NIKI
+            </span>
           </Link>
 
           {/* Desktop Nav */}
