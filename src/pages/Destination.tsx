@@ -20,19 +20,19 @@ export default function Destination() {
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img 
           src={IMAGES.destination} 
-          alt="Destination Weddings" 
+          alt="Destination Wedding Makeup Artist by Niki" 
           className="absolute inset-0 w-full h-full object-cover object-[center_75%] md:object-[center_85%] text-transparent"
           referrerPolicy="no-referrer"
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 text-white">
-          <motion.h4 
+          <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6 drop-shadow-md"
+            className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-6 block drop-shadow-md"
           >
             Global Artistry
-          </motion.h4>
+          </motion.span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

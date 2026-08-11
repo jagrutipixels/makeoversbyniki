@@ -124,7 +124,7 @@ export default function Portfolio() {
                 {/* Background Image */}
                 <img 
                   src={item.src} 
-                  alt={item.title} 
+                  alt={`${item.title} - Luxury Bridal Makeup by Niki`} 
                   className={`w-full h-full object-cover ${item.position} transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100`}
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -135,9 +135,9 @@ export default function Portfolio() {
                   <span className="text-secondary text-[10px] md:text-xs tracking-[0.2em] uppercase font-semibold mb-1">
                     {item.category}
                   </span>
-                  <h4 className="text-white font-serif text-sm md:text-lg leading-snug">
+                  <h3 className="text-white font-serif text-sm md:text-lg leading-snug">
                     {item.title}
-                  </h4>
+                  </h3>
                 </div>
 
                 {/* Always-visible category pill on mobile */}

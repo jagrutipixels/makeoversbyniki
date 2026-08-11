@@ -26,7 +26,7 @@ export default function About() {
         >
           <img 
             src="https://drive.google.com/thumbnail?id=1wX1s9vOkVDad3zyfkw4N1qg7R2xWQ85e&sz=w1080" 
-            alt="Niki working" 
+            alt="Niki Gurnani - Luxury Bridal Makeup Artist" 
             className="w-full h-full object-cover object-[center_top]"
             referrerPolicy="no-referrer"
           />

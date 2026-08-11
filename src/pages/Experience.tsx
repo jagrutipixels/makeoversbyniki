@@ -53,7 +53,7 @@ export default function Experience() {
         >
           <img 
             src={IMAGES.experience} 
-            alt="Bridal Experience" 
+            alt="Signature Luxury Bridal Makeup Experience" 
             className="w-full h-full object-cover object-[center_top]" 
             referrerPolicy="no-referrer" 
           />

@@ -51,14 +51,14 @@ export default function Contact() {
 
 
         <div className="text-center mb-20">
-          <motion.h4 
+          <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-4"
+            className="uppercase tracking-[0.3em] text-secondary text-sm font-medium mb-4 block"
           >
             Get In Touch
-          </motion.h4>
+          </motion.span>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
