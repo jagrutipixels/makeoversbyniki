@@ -203,7 +203,7 @@ export default function Home() {
         </AnimatePresence>
 
         {/* Text Area for Slider: Top-Centered on Mobile, Bottom-Left on Desktop */}
-        <div className="absolute inset-0 flex flex-col justify-start pt-6 md:justify-end md:pb-40 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col justify-start pt-14 md:justify-end md:pb-20 lg:pb-24 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -214,11 +214,11 @@ export default function Home() {
               className="pointer-events-auto flex flex-col items-center text-center md:items-start md:text-left"
             >
               {/* Subtitle Block: Logo Emblem centered directly over the midpoint of the subtitle line */}
-              <div className="flex flex-col items-center justify-center md:items-center w-full md:w-auto mb-3 md:mb-6">
+              <div className="flex flex-col items-center justify-center md:items-center w-full md:w-auto mb-2 md:mb-4">
                 <img 
                   src={LOGO_URL} 
                   alt="Makeovers by Niki Logo" 
-                  className="h-14 sm:h-18 md:h-24 lg:h-28 w-auto object-contain mb-3 md:mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                  className="h-10 sm:h-12 md:h-16 lg:h-18 w-auto object-contain mb-2.5 md:mb-3 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
                   referrerPolicy="no-referrer"
                 />
 
