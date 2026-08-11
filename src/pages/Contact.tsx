@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-brand-bg w-full pt-16 pb-24 min-h-screen">
+    <div className="bg-brand-bg w-full pt-28 md:pt-36 pb-24 min-h-screen">
       <Helmet>
         <title>Contact & Bookings | Makeovers by Niki</title>
         <meta name="description" content="Inquire and book luxury bridal makeup services for weddings across India and global destinations with Niki." />
