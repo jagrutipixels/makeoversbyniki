@@ -80,7 +80,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Email */}
           <motion.a 
-            href="mailto:hello@makeoversbyniki.com"
+            href="mailto:nikita.gurnani99@gmail.com"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -91,12 +91,12 @@ export default function Contact() {
             </div>
             <h3 className="font-serif text-2xl text-primary mb-3">Email Us</h3>
             <p className="text-primary/60 font-light text-sm mb-6 text-center">For detailed inquiries and portfolio requests.</p>
-            <span className="text-xs md:text-sm tracking-widest uppercase text-secondary font-medium">hello@makeoversbyniki.com</span>
+            <span className="text-xs md:text-sm tracking-wider text-secondary font-medium lowercase">nikita.gurnani99@gmail.com</span>
           </motion.a>
 
           {/* WhatsApp */}
           <motion.a 
-            href="https://wa.me/919876543210"
+            href="https://wa.me/254789355027"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -109,12 +109,11 @@ export default function Contact() {
             </div>
             <h3 className="font-serif text-2xl text-primary mb-3">WhatsApp</h3>
             <p className="text-primary/60 font-light text-sm mb-6 text-center">For quick questions and date availability.</p>
-            <span className="text-xs md:text-sm tracking-widest uppercase text-[#25D366] font-medium">Chat with us</span>
+            <span className="text-xs md:text-sm tracking-widest uppercase text-[#25D366] font-medium">+254 789 355027</span>
           </motion.a>
 
           {/* Call */}
-          <motion.a 
-            href="tel:+919876543210"
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -124,9 +123,12 @@ export default function Contact() {
               <Phone size={24} />
             </div>
             <h3 className="font-serif text-2xl text-primary mb-3">Call</h3>
-            <p className="text-primary/60 font-light text-sm mb-6 text-center">Speak directly with our team.</p>
-            <span className="text-xs md:text-sm tracking-widest uppercase text-secondary font-medium">+91 98765 43210</span>
-          </motion.a>
+            <p className="text-primary/60 font-light text-sm mb-4 text-center">Speak directly with our team.</p>
+            <div className="flex flex-col items-center space-y-1.5 text-xs md:text-sm tracking-wider font-medium text-secondary">
+              <a href="tel:+254789355027" className="hover:underline">Nairobi: +254 789 355027</a>
+              <a href="tel:+919619500785" className="hover:underline">India: +91 96195 00785</a>
+            </div>
+          </motion.div>
         </div>
 
         {/* FAQs */}

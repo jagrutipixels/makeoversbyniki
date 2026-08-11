@@ -42,20 +42,24 @@ export default function Footer() {
         {/* Contact */}
         <div className="flex flex-col space-y-6">
           <h4 className="font-sans text-sm tracking-[0.2em] uppercase text-secondary">Inquiries</h4>
-          <div className="flex flex-col space-y-4">
-            <a href="mailto:hello@makeoversbyniki.com" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
-              <Mail size={16} />
-              <span>hello@makeoversbyniki.com</span>
+          <div className="flex flex-col space-y-3.5">
+            <a href="mailto:nikita.gurnani99@gmail.com" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
+              <Mail size={16} className="flex-shrink-0" />
+              <span className="truncate">nikita.gurnani99@gmail.com</span>
             </a>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
-              <MessageCircle size={16} />
-              <span>Chat on WhatsApp</span>
+            <a href="https://wa.me/254789355027" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
+              <MessageCircle size={16} className="flex-shrink-0 text-[#25D366]" />
+              <span>WhatsApp: +254 789 355027</span>
             </a>
-            <a href="tel:+919876543210" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
-              <Phone size={16} />
-              <span>+91 98765 43210</span>
+            <a href="tel:+254789355027" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
+              <Phone size={16} className="flex-shrink-0" />
+              <span>Nairobi: +254 789 355027</span>
             </a>
-            <div className="flex items-start space-x-3 text-white/70 text-sm">
+            <a href="tel:+919619500785" className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm">
+              <Phone size={16} className="flex-shrink-0" />
+              <span>India: +91 96195 00785</span>
+            </a>
+            <div className="flex items-start space-x-3 text-white/70 text-sm pt-1">
               <MapPin size={16} className="mt-1 flex-shrink-0" />
               <span>Available globally for luxury destination weddings and exclusive celebrations.</span>
             </div>
