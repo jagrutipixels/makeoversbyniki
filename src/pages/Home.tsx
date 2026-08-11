@@ -213,20 +213,19 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="pointer-events-auto flex flex-col items-center text-center md:items-start md:text-left"
             >
-              {/* Logo Emblem & Subtitle Block (Bigger & Center-Aligned) */}
-              <div className="w-full flex flex-col items-center justify-center md:items-center text-center mb-3 md:mb-5">
-                <img 
-                  src={LOGO_URL} 
-                  alt="Makeovers by Niki Logo" 
-                  className="h-14 sm:h-18 md:h-24 lg:h-28 w-auto object-contain mb-3 md:mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
-                  referrerPolicy="no-referrer"
-                />
+              {/* Logo Emblem Above Subtitle */}
+              <img 
+                src={LOGO_URL} 
+                alt="Makeovers by Niki Logo" 
+                className="h-12 sm:h-16 md:h-22 lg:h-26 w-auto object-contain mb-3 md:mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                referrerPolicy="no-referrer"
+              />
 
-                <div className="flex items-center justify-center space-x-3 md:space-x-5">
-                  <div className="w-6 md:w-12 h-[1px] bg-secondary" />
-                  <span className="text-secondary tracking-[0.25em] text-[10px] sm:text-xs md:text-sm uppercase font-medium drop-shadow-md">{SLIDES[currentSlide].subtitle}</span>
-                  <div className="w-6 md:w-12 h-[1px] bg-secondary" />
-                </div>
+              {/* Subtitle in original layout */}
+              <div className="flex items-center justify-center md:justify-start space-x-2.5 md:space-x-4 mb-2 md:mb-6">
+                <div className="w-4 md:w-8 h-[1px] bg-secondary" />
+                <span className="text-secondary tracking-[0.25em] text-[10px] sm:text-xs md:text-sm uppercase font-medium drop-shadow-md">{SLIDES[currentSlide].subtitle}</span>
+                <div className="w-4 h-[1px] bg-secondary md:hidden" />
               </div>
               <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.2] mb-3 md:mb-8 text-white max-w-xs sm:max-w-xl md:max-w-3xl drop-shadow-2xl tracking-tight [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%)]">
                 {SLIDES[currentSlide].title.split('\n').map((line, i) => <div key={i}>{line}</div>) }
