@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
-import { IMAGES } from '../data';
+import { IMAGES, LOGO_URL } from '../data';
 import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter, ArrowLeft } from 'lucide-react';
 
 const SLIDES = [
@@ -213,6 +213,14 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="pointer-events-auto flex flex-col items-center text-center md:items-start md:text-left"
             >
+              {/* Logo Emblem Above Subtitle */}
+              <img 
+                src={LOGO_URL} 
+                alt="Makeovers by Niki Logo" 
+                className="h-10 sm:h-12 md:h-16 w-auto object-contain mb-3 md:mb-5 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+                referrerPolicy="no-referrer"
+              />
+
               <div className="flex items-center justify-center md:justify-start space-x-2.5 md:space-x-4 mb-2 md:mb-6">
                 <div className="w-4 md:w-8 h-[1px] bg-secondary" />
                 <span className="text-secondary tracking-[0.25em] text-[10px] sm:text-xs md:text-sm uppercase font-medium drop-shadow-md">{SLIDES[currentSlide].subtitle}</span>
