@@ -24,9 +24,9 @@ export default function About() {
           className="lg:col-span-5 relative aspect-[4/5] sm:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10"
         >
           <img 
-            src="https://drive.google.com/thumbnail?id=16jm3M4yKMSh3LN0XPi7E-RjRhtRIEVgh&sz=w1080" 
+            src="https://drive.google.com/thumbnail?id=1wX1s9vOkVDad3zyfkw4N1qg7R2xWQ85e&sz=w1080" 
             alt="Niki working" 
-            className="w-full h-full object-cover object-[center_55%]"
+            className="w-full h-full object-cover object-[center_top]"
             referrerPolicy="no-referrer"
           />
         </motion.div>
