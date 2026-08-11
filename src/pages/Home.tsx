@@ -35,9 +35,9 @@ const SLIDES = [
 const CATEGORIES = [
   { 
     title: "Luxury Bridal Makeup", 
-    landscape: "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w800",
+    landscape: "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w800",
     mobile: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080",
-    position: "object-[center_top]",
+    position: "object-[80%_center]",
     mobilePosition: "object-[center_top]"
   },
   { 
@@ -63,10 +63,10 @@ const CATEGORIES = [
   },
   { 
     title: "Destination Bridal Experience", 
-    landscape: "https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w800",
-    mobile: "https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080",
-    position: "object-[center_top]",
-    mobilePosition: "object-[center_top]"
+    landscape: "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800",
+    mobile: "https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080",
+    position: "object-[30%_center]",
+    mobilePosition: "object-[center_12%]"
   }
 ];
 

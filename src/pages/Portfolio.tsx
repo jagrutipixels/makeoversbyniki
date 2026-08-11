@@ -7,6 +7,7 @@ const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', '
 
 const PORTFOLIO_ITEMS = [
   // BRIDAL CATEGORY
+  { id: '1', title: 'Royal Kundan Red Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w1080', position: 'object-[center_top]' },
   { id: '2', title: 'Editorial South Asian Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1080', position: 'object-[center_top]' },
   { id: '4', title: 'Regal Gold Kundan Portrait', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=19FYB0a5sSEVcn8Vfq933oABEXC-PnnOF&sz=w1080', position: 'object-[center_top]' },
   { id: '5', title: 'Contemporary Crimson Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1QE0eedAxgy2hFSkqdGukXo6kh9vuJADM&sz=w1080', position: 'object-[center_top]' },
@@ -30,12 +31,15 @@ const PORTFOLIO_ITEMS = [
 
   // DESTINATION CATEGORY
   { id: '22', title: 'Udaipur Palace Destination', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1080', position: 'object-[center_top]' },
+  { id: '24', title: 'Beachside Royal Sunset', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080', position: 'object-[center_top]' },
   { id: '25', title: 'Tropical Pink Lehenga Bride', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080', position: 'object-[center_top]' },
   { id: '26', title: 'Destination Sunset Radiance', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1ZpyRzgZBj8_vzgFua-Q9gBLAZisO60SW&sz=w1080', position: 'object-[center_top]' },
 
   // ARTISTRY CATEGORY
   { id: '28', title: 'Jewelry Styling Precision', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080', position: 'object-[center_top]' },
-  { id: '29', title: 'Eye Makeup Masterclass', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080', position: 'object-[center_top]' }
+  { id: '29', title: 'Eye Makeup Masterclass', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080', position: 'object-[center_top]' },
+  { id: '30', title: 'Bridal Preparation Studio', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1zhmnxlQS1iuk77C_2n6GOgGmUKyJMLUq&sz=w1080', position: 'object-[center_top]' },
+  { id: '31', title: 'Signature Touch Styling', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1r_juGdUhZHbj6senueHky8PKM5EhqCpR&sz=w1080', position: 'object-[center_top]' }
 ];
 
 export default function Portfolio() {
