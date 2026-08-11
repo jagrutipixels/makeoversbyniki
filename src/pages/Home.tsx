@@ -195,15 +195,15 @@ export default function Home() {
               referrerPolicy="no-referrer"
               loading={currentSlide === 0 ? "eager" : "lazy"}
             />
-            {/* Gradient Overlays: Rich bottom gradient shadow on mobile to protect bride faces & enhance text legibility; Left-focused shadow on desktop */}
-            <div className="absolute bottom-0 inset-x-0 h-2/3 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/80 to-transparent block md:hidden pointer-events-none z-[1]" />
+            {/* Gradient Overlays: Top-focused dark shadow on mobile for top-centered text; Left-focused shadow on desktop */}
+            <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-black/90 via-black/50 to-transparent block md:hidden pointer-events-none z-[1]" />
             <div className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black/85 via-black/50 to-transparent hidden md:block pointer-events-none z-[1]" />
-            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent hidden md:block pointer-events-none z-[1]" />
+            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent pointer-events-none z-[1]" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Text Area for Slider: Bottom-Centered on Mobile, Bottom-Left on Desktop */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-20 sm:pb-24 md:pb-12 lg:pb-14 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
+        {/* Text Area for Slider: Top-Centered on Mobile (Slightly adjusted higher), Bottom-Left on Desktop */}
+        <div className="absolute inset-0 flex flex-col justify-start pt-4 sm:pt-6 md:justify-end md:pb-12 lg:pb-14 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
