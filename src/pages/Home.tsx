@@ -203,7 +203,7 @@ export default function Home() {
         </AnimatePresence>
 
         {/* Text Area for Slider: Top-Centered on Mobile, Bottom-Left on Desktop */}
-        <div className="absolute inset-0 flex flex-col justify-start pt-14 md:justify-end md:pb-20 lg:pb-24 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col justify-start pt-14 md:justify-end md:pb-12 lg:pb-14 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -218,7 +218,7 @@ export default function Home() {
                 <img 
                   src={LOGO_URL} 
                   alt="Makeovers by Niki Logo" 
-                  className="h-10 sm:h-12 md:h-16 lg:h-18 w-auto object-contain mb-2.5 md:mb-3 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                  className="h-14 sm:h-18 md:h-22 lg:h-26 w-auto object-contain mb-2.5 md:mb-3 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
                   referrerPolicy="no-referrer"
                 />
 
