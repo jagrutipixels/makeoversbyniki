@@ -3,47 +3,47 @@ export const LOGO_URL = "https://drive.google.com/thumbnail?id=1BAW1OILqFBTITyvq
 export const IMAGES = {
   heroSlides: [
     {
-      landscape: "https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=1P8LQpXOfVL6EtGcvhgB6LyB_erM310qv&sz=w1080"
+      landscape: "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1920",
+      mobile: "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1080"
     },
     {
-      landscape: "https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=1QnWu7oudp07eTubCyA-7jC1xbRcDTaeb&sz=w1080"
+      landscape: "https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1920",
+      mobile: "https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080"
     },
     {
-      landscape: "https://drive.google.com/thumbnail?id=19LwcHjLpnn4Xijr4VgeN3cM_LHQ4wSHx&sz=w1920",
-      mobile: "https://drive.google.com/thumbnail?id=1PQgoq6Ncl--YSqvVN3tEynQzlme1-7dy&sz=w1080"
+      landscape: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1920",
+      mobile: "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1080"
     },
     {
       landscape: "https://drive.google.com/thumbnail?id=1AkVxp61Nbiq7_tMPbz1RXgFVZfEBdBD2&sz=w1920",
       mobile: "https://drive.google.com/thumbnail?id=1ebPsYAv2XV_BheDtxNUSIni6eCfJxncy&sz=w1080"
     },
     {
-      landscape: "https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1920",
+      landscape: "https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1920",
       mobile: "https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080"
     }
   ],
   heroImages: [
-    "https://drive.google.com/thumbnail?id=1pKCtWb4A_CPJcI4UeOBWqAnIl_XnYLfv&sz=w1920",
-    "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1920",
     "https://drive.google.com/thumbnail?id=19FYB0a5sSEVcn8Vfq933oABEXC-PnnOF&sz=w1920",
     "https://drive.google.com/thumbnail?id=1QE0eedAxgy2hFSkqdGukXo6kh9vuJADM&sz=w1920",
     "https://drive.google.com/thumbnail?id=1hU2ePiAdhESb9YqX2ZPB0QAjOhGGieWy&sz=w1920",
     "https://drive.google.com/thumbnail?id=1hzPHtKvgOlLlK2VyDhNTt9fXYopmtGkB&sz=w1920",
-    "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1920",
     "https://drive.google.com/thumbnail?id=1kc5bWqA_qoaEIqB6mvMbMXdjXP5RwovB&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1EYedjnAAVlsRq5YDHUFqLDfexJG-ejns&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1920",
   ],
   hero: "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1920", // Elegant South Asian Bride / Editorial
-  about: "https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080", // Niki - Makeup Artist
+  about: "https://drive.google.com/thumbnail?id=1wX1s9vOkVDad3zyfkw4N1qg7R2xWQ85e&sz=w1080", // Niki Official Portrait
   experience: "https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080", // Niki styling jewelry
   destination: "https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1920", // Resort/Palace wedding
   contact: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?fm=webp&q=75&w=1080&fit=crop", // Close up details
   portfolio: [
-    "https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w800",
+    "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w800",
     "https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w800",
     "https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w800",
     "https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w800",
-    "https://drive.google.com/thumbnail?id=1sl2XSexbz5oJvsiHNS5ClvZikh3vIu_g&sz=w800"
+    "https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w800"
   ],
   transformations: [
     "https://drive.google.com/thumbnail?id=1SomkXXqIMtfDOQ0GS5XAlrEEsuBkFzDu&sz=w800",
