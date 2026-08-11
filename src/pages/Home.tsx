@@ -138,7 +138,7 @@ export default function Home() {
             <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors">instagram</span>
           </a>
           <div className="w-1 h-1 rounded-full bg-secondary opacity-50"></div>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-4 text-white/50 hover:text-white transition-colors group" aria-label="Facebook">
+          <a href="https://www.facebook.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-4 text-white/50 hover:text-white transition-colors group" aria-label="Facebook">
             <Facebook size={16} className="group-hover:text-secondary transition-colors" />
             <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors">facebook</span>
           </a>

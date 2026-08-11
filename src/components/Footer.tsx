@@ -74,6 +74,15 @@ export default function Footer() {
             <Instagram size={16} />
             <span>@makeoversbyniki</span>
           </a>
+          <a 
+            href="https://www.facebook.com/makeoversbyniki" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors text-sm"
+          >
+            <span className="font-bold text-xs uppercase tracking-wider text-secondary">f</span>
+            <span>Facebook</span>
+          </a>
         </div>
       </div>
 
