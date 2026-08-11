@@ -195,15 +195,15 @@ export default function Home() {
               referrerPolicy="no-referrer"
               loading={currentSlide === 0 ? "eager" : "lazy"}
             />
-            {/* Gradient Overlays: Top-focused dark shadow on mobile for top-centered text; Left-focused shadow on desktop */}
-            <div className="absolute top-0 inset-x-0 h-48 bg-gradient-to-b from-black/90 via-black/50 to-transparent block md:hidden pointer-events-none z-[1]" />
+            {/* Gradient Overlays: Rich bottom gradient shadow on mobile to protect bride faces & enhance text legibility; Left-focused shadow on desktop */}
+            <div className="absolute bottom-0 inset-x-0 h-2/3 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/80 to-transparent block md:hidden pointer-events-none z-[1]" />
             <div className="absolute inset-y-0 left-0 w-3/5 bg-gradient-to-r from-black/85 via-black/50 to-transparent hidden md:block pointer-events-none z-[1]" />
-            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent pointer-events-none z-[1]" />
+            <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0b0c10] via-[#0b0c10]/60 to-transparent hidden md:block pointer-events-none z-[1]" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Text Area for Slider: Top-Centered on Mobile, Bottom-Left on Desktop */}
-        <div className="absolute inset-0 flex flex-col justify-start pt-14 md:justify-end md:pb-12 lg:pb-14 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
+        {/* Text Area for Slider: Bottom-Centered on Mobile, Bottom-Left on Desktop */}
+        <div className="absolute inset-0 flex flex-col justify-end pb-20 sm:pb-24 md:pb-12 lg:pb-14 px-6 sm:px-8 md:pl-16 md:pr-24 md:right-32 z-10 pointer-events-none">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -228,7 +228,7 @@ export default function Home() {
                   <div className="w-4 h-[1px] bg-secondary md:hidden" />
                 </div>
               </div>
-              <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.2] mb-3 md:mb-8 text-white max-w-xs sm:max-w-xl md:max-w-3xl drop-shadow-2xl tracking-tight [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%)]">
+              <h1 className="text-xl sm:text-3xl md:text-6xl lg:text-7xl font-sans font-bold leading-[1.25] mb-3 md:mb-8 text-white max-w-xs sm:max-w-xl md:max-w-3xl drop-shadow-2xl tracking-tight [text-shadow:_0_2px_15px_rgb(0_0_0_/_80%)]">
                 {SLIDES[currentSlide].title.split('\n').map((line, i) => <div key={i}>{line}</div>) }
               </h1>
               <Link 
