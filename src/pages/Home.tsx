@@ -7,16 +7,16 @@ import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter
 
 const SLIDES = [
   {
-    subtitle: "ROYAL BRIDAL EXPERIENCE",
-    title: "Crafting Unforgettable Grace for Your Special Day",
-    linkText: "READ MORE >",
-    image: IMAGES.heroSlides[0]
-  },
-  {
     subtitle: "CELEBRITY & EDITORIAL",
     title: "Dramatic Allure Designed for the Spotlight",
     linkText: "READ MORE >",
     image: IMAGES.heroSlides[4]
+  },
+  {
+    subtitle: "ROYAL BRIDAL EXPERIENCE",
+    title: "Crafting Unforgettable Grace for Your Special Day",
+    linkText: "READ MORE >",
+    image: IMAGES.heroSlides[0]
   },
   {
     subtitle: "SIGNATURE HD GLOW",
