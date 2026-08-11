@@ -218,7 +218,7 @@ export default function Home() {
                 <img 
                   src={LOGO_URL} 
                   alt="Makeovers by Niki Logo" 
-                  className="h-14 sm:h-18 md:h-22 lg:h-26 w-auto object-contain mb-2.5 md:mb-3 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+                  className="hidden md:block h-14 sm:h-18 md:h-22 lg:h-26 w-auto object-contain mb-2.5 md:mb-3 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
                   referrerPolicy="no-referrer"
                 />
 
