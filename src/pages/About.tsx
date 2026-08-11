@@ -8,8 +8,9 @@ export default function About() {
   return (
     <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-20">
       <Helmet>
-        <title>About Niki | Expert Luxury Bridal Makeup Artist for HNI Weddings</title>
-        <meta name="description" content="Discover the artistry of Niki, a premier luxury bridal makeup artist with decades of global expertise. Creating timeless beauty for elite HNI clients across India and internationally." />
+        <title>About Niki | Expert Luxury Bridal Makeup Artist</title>
+        <meta name="description" content="Discover Niki's story as a premier luxury bridal makeup artist with over 20 years of experience across India and international destinations." />
+        <link rel="canonical" href="https://makeoversbyniki.com/about" />
       </Helmet>
 
 

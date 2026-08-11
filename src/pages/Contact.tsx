@@ -42,8 +42,9 @@ export default function Contact() {
   return (
     <div className="bg-brand-bg w-full pt-16 pb-24 min-h-screen">
       <Helmet>
-        <title>Contact | Luxury Bridal Makeup Inquiries | HNI & Destination Weddings</title>
-        <meta name="description" content="Inquire about date availability with Makeovers by Niki. Exclusive luxury bridal makeup services for HNI clients and global destination weddings across India and worldwide." />
+        <title>Contact & Bookings | Makeovers by Niki</title>
+        <meta name="description" content="Inquire and book luxury bridal makeup services for weddings across India and global destinations with Niki." />
+        <link rel="canonical" href="https://makeoversbyniki.com/contact" />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-6">

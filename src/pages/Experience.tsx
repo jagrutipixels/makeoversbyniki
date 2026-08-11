@@ -35,8 +35,9 @@ export default function Experience() {
   return (
     <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-20">
       <Helmet>
-        <title>Signature Bridal Makeup Services | HNI Wedding Experience | Makeovers by Niki</title>
-        <meta name="description" content="Discover bespoke luxury bridal services, including flawless HD and Airbrush makeup techniques. Elite wedding beauty experiences tailored for HNI and global brides." />
+        <title>Signature Bridal Makeup Services | Makeovers by Niki</title>
+        <meta name="description" content="Discover bespoke luxury bridal services, including flawless HD and Airbrush makeup techniques. Elite wedding beauty experiences tailored for brides." />
+        <link rel="canonical" href="https://makeoversbyniki.com/experience" />
       </Helmet>
 
 

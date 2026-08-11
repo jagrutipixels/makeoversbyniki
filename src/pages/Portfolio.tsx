@@ -68,8 +68,9 @@ export default function Portfolio() {
   return (
     <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-24 min-h-screen">
       <Helmet>
-        <title>Luxury Bridal Portfolio | Master Gallery | Makeovers by Niki</title>
-        <meta name="description" content="Explore our complete gallery of luxury bridal makeup transformations across India and global wedding destinations." />
+        <title>Bridal Makeup Portfolio Gallery | Makeovers by Niki</title>
+        <meta name="description" content="Explore our curated gallery of luxury bridal makeup transformations across India and global wedding destinations." />
+        <link rel="canonical" href="https://makeoversbyniki.com/portfolio" />
       </Helmet>
 
       {/* Header */}

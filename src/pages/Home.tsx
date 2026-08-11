@@ -120,8 +120,9 @@ export default function Home() {
   return (
     <div className="fixed top-20 md:top-24 h-[calc(100dvh-5rem)] md:h-[calc(100vh-6rem)] left-0 right-0 bg-[#0b0c10] text-white flex z-40 overflow-hidden font-sans">
       <Helmet>
-        <title>Global Luxury Bridal Makeup Artist for HNI Weddings | Makeovers by Nikki</title>
-        <meta name="description" content="Top luxury bridal makeup artist serving HNI clients across India and globally. Bespoke beauty transformations for elite destination weddings worldwide." />
+        <title>Luxury Bridal Makeup Artist | Makeovers by Niki</title>
+        <meta name="description" content="Luxury bridal & destination wedding makeup artist in India and internationally. Niki crafts bespoke, high-fashion HD and airbrush bridal looks." />
+        <link rel="canonical" href="https://makeoversbyniki.com/" />
       </Helmet>
 
       {/* Left Strip */}

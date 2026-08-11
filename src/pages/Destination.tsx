@@ -10,8 +10,9 @@ export default function Destination() {
   return (
     <div className="bg-brand-bg w-full">
       <Helmet>
-        <title>Luxury Destination Wedding Makeup Artist | Global & India | Makeovers by Niki</title>
-        <meta name="description" content="Seamless luxury destination wedding makeup artistry across India, Dubai, Italy, and beyond. Exclusive bridal packages for HNI and international clientele." />
+        <title>Destination Wedding Makeup Artist | Makeovers by Niki</title>
+        <meta name="description" content="Seamless luxury destination wedding makeup artistry across India, Dubai, Italy, and beyond. Exclusive bridal beauty experiences." />
+        <link rel="canonical" href="https://makeoversbyniki.com/destination" />
       </Helmet>
 
 
