@@ -128,6 +128,7 @@ export default function Portfolio() {
                   className={`w-full h-full object-cover ${item.position} transform group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100`}
                   referrerPolicy="no-referrer"
                   loading="lazy"
+                  decoding="async"
                 />
 
                 {/* Subtle Hover Gradient Overlay */}

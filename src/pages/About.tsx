@@ -29,6 +29,8 @@ export default function About() {
             alt="Niki Gurnani - Luxury Bridal Makeup Artist" 
             className="w-full h-full object-cover object-[center_top]"
             referrerPolicy="no-referrer"
+            decoding="async"
+            fetchPriority="high"
           />
         </motion.div>
 

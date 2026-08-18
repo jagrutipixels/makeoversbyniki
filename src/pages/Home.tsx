@@ -187,6 +187,8 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover object-[center_top] opacity-100 hidden md:block"
               referrerPolicy="no-referrer"
               loading={currentSlide === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={currentSlide === 0 ? "high" : "low"}
             />
             <img 
               src={SLIDES[currentSlide].image.mobile} 
@@ -194,6 +196,8 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover object-[center_top] opacity-100 block md:hidden"
               referrerPolicy="no-referrer"
               loading={currentSlide === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={currentSlide === 0 ? "high" : "low"}
             />
             {/* Gradient Overlays: Top-focused dark shadow on mobile for top-centered text; Left-focused shadow on desktop */}
             <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-black/90 via-black/50 to-transparent block md:hidden pointer-events-none z-[1]" />

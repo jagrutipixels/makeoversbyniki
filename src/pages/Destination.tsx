@@ -23,6 +23,8 @@ export default function Destination() {
           alt="Destination Wedding Makeup Artist by Niki" 
           className="absolute inset-0 w-full h-full object-cover object-[center_75%] md:object-[center_85%] text-transparent"
           referrerPolicy="no-referrer"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 text-white">
           <motion.span 

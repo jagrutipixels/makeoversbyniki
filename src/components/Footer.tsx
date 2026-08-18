@@ -20,6 +20,8 @@ export default function Footer() {
               alt="Makeovers by Niki"
               className="h-16 md:h-20 object-contain w-auto brightness-0 invert"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
             />
           </Link>
           <p className="text-white/60 text-sm leading-relaxed max-w-sm">

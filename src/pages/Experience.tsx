@@ -56,6 +56,8 @@ export default function Experience() {
             alt="Signature Luxury Bridal Makeup Experience" 
             className="w-full h-full object-cover object-[center_top]" 
             referrerPolicy="no-referrer" 
+            decoding="async"
+            fetchPriority="high"
           />
         </motion.div>
         
