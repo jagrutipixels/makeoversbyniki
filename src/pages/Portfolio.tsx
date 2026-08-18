@@ -6,9 +6,9 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', 'Artistry'];
 
 const PORTFOLIO_ITEMS = [
-  { id: '1', title: 'Tropical Pink Lehenga Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1080', position: 'object-[center_top]' },
-  { id: '2', title: 'Royal Bridal Couture', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1080', position: 'object-[center_top]' },
-  { id: '3', title: 'Dramatic Allure Spotlight', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1080', position: 'object-[center_top]' },
+  { id: '1', title: 'Tropical Pink Lehenga Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1080', position: 'object-[85%_25%]' },
+  { id: '2', title: 'Royal Staircase Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1080', position: 'object-[95%_center]' },
+  { id: '3', title: 'Royal Kundan Ceremony Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1080', position: 'object-[65%_top]' },
   { id: '4', title: 'Airbrush Yellow Lehenga Glam', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080', position: 'object-[center_top]' },
   { id: '5', title: 'Chic Evening Ceremony', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w1080', position: 'object-[center_top]' },
   { id: '6', title: 'Sun-Kissed Golden Glow', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w1080', position: 'object-[center_top]' },
