@@ -6,40 +6,16 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 const CATEGORIES = ['All', 'Bridal', 'Engagement', 'Reception', 'Destination', 'Artistry'];
 
 const PORTFOLIO_ITEMS = [
-  // BRIDAL CATEGORY
-  { id: '1', title: 'Royal Kundan Red Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=11bTisad9hk9muFThyIgJ9YY_75byZLLO&sz=w1080', position: 'object-[center_top]' },
-  { id: '2', title: 'Editorial South Asian Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1080', position: 'object-[center_top]' },
-  { id: '4', title: 'Regal Gold Kundan Portrait', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=19FYB0a5sSEVcn8Vfq933oABEXC-PnnOF&sz=w1080', position: 'object-[center_top]' },
-  { id: '5', title: 'Contemporary Crimson Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1QE0eedAxgy2hFSkqdGukXo6kh9vuJADM&sz=w1080', position: 'object-[center_top]' },
-  { id: '6', title: 'Opulent Palace Bridal Look', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1hU2ePiAdhESb9YqX2ZPB0QAjOhGGieWy&sz=w1080', position: 'object-[center_top]' },
-  { id: '7', title: 'Timeless Traditional Elegance', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1hzPHtKvgOlLlK2VyDhNTt9fXYopmtGkB&sz=w1080', position: 'object-[center_top]' },
-  { id: '8', title: 'Sleek Modern Bridal Glow', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1kc5bWqA_qoaEIqB6mvMbMXdjXP5RwovB&sz=w1080', position: 'object-[center_top]' },
-
-  // ENGAGEMENT CATEGORY
-  { id: '11', title: 'Pastel Garden Ceremony', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1MN7DdCWXD-xdkkJm6yonq0Sba2ZHt9BJ&sz=w1080', position: 'object-[center_top]' },
-  { id: '13', title: 'Sun-Kissed Engagement Look', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w1080', position: 'object-[center_top]' },
-  { id: '14', title: 'Chic Evening Engagement', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w1080', position: 'object-[center_top]' },
-  { id: '15', title: 'Delicate Floral Sangeet Look', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080', position: 'object-[center_top]' },
-
-  // RECEPTION CATEGORY
-  { id: '16', title: 'Airbrush Yellow Lehenga Glam', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080', position: 'object-[center_top]' },
-  { id: '17', title: 'Glistening Reception Glam', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080', position: 'object-[center_top]' },
-  { id: '18', title: 'High-HD Reception Finish', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=173Zi3jXZkDhDghrvzhCsYUD-8mirpmAA&sz=w1080', position: 'object-[center_top]' },
-  { id: '19', title: 'Midnight Starlight Couture', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1ebPsYAv2XV_BheDtxNUSIni6eCfJxncy&sz=w1080', position: 'object-[center_top]' },
-  { id: '20', title: 'Natural Glow Transformation', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1SomkXXqIMtfDOQ0GS5XAlrEEsuBkFzDu&sz=w1080', position: 'object-[center_top]' },
-  { id: '21', title: 'Sculpted HD Beauty', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1u9jr6vQuVkU0BvSng5616hkemuB20O95&sz=w1080', position: 'object-[center_top]' },
-
-  // DESTINATION CATEGORY
-  { id: '22', title: 'Udaipur Palace Destination', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1080', position: 'object-[center_top]' },
-  { id: '24', title: 'Beachside Royal Sunset', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=14kKbtmD8rU-oJzjnQm_o44E0Z8RL5zBg&sz=w1080', position: 'object-[center_top]' },
-  { id: '25', title: 'Tropical Pink Lehenga Bride', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1vT8i8tGBSv1jeEfg1wYeTY4ID_zxAau7&sz=w1080', position: 'object-[center_top]' },
-  { id: '26', title: 'Destination Sunset Radiance', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1ZpyRzgZBj8_vzgFua-Q9gBLAZisO60SW&sz=w1080', position: 'object-[center_top]' },
-
-  // ARTISTRY CATEGORY
-  { id: '28', title: 'Jewelry Styling Precision', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080', position: 'object-[center_top]' },
-  { id: '29', title: 'Eye Makeup Masterclass', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080', position: 'object-[center_top]' },
-  { id: '30', title: 'Bridal Preparation Studio', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1zhmnxlQS1iuk77C_2n6GOgGmUKyJMLUq&sz=w1080', position: 'object-[center_top]' },
-  { id: '31', title: 'Signature Touch Styling', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=1r_juGdUhZHbj6senueHky8PKM5EhqCpR&sz=w1080', position: 'object-[center_top]' }
+  { id: '1', title: 'Tropical Pink Lehenga Bride', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=174B5EmcC2GqUwDEi2hWkUwh2oIH39UxI&sz=w1080', position: 'object-[center_top]' },
+  { id: '2', title: 'Royal Bridal Couture', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=1j_MmOD7r0ZlLKUGQU9UloY_ywuugVoHD&sz=w1080', position: 'object-[center_top]' },
+  { id: '3', title: 'Dramatic Allure Spotlight', category: 'Bridal', src: 'https://drive.google.com/thumbnail?id=14zzL815Zj1i2YnuV71OaGR43rlfrl8GZ&sz=w1080', position: 'object-[center_top]' },
+  { id: '4', title: 'Airbrush Yellow Lehenga Glam', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=1Da7FomBdM8M7OqzVU3d2yV9IUwfi48us&sz=w1080', position: 'object-[center_top]' },
+  { id: '5', title: 'Chic Evening Ceremony', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1j1jVNPVbMysukBukRXcxOTYKs2NwDgNg&sz=w1080', position: 'object-[center_top]' },
+  { id: '6', title: 'Sun-Kissed Golden Glow', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1TkYZRkx6Bft1SKiE1LvKH4c3CwZdTNVo&sz=w1080', position: 'object-[center_top]' },
+  { id: '7', title: 'Glistening Reception Artistry', category: 'Reception', src: 'https://drive.google.com/thumbnail?id=11RAjl2b5DWq8b65MgHw45DVsNBGkcAaw&sz=w1080', position: 'object-[center_top]' },
+  { id: '8', title: 'Delicate Floral Sangeet', category: 'Engagement', src: 'https://drive.google.com/thumbnail?id=1kUqsH-Fh-XD9HAXhv0A6Dabt5tIP377d&sz=w1080', position: 'object-[center_top]' },
+  { id: '9', title: 'Destination Luxury Grace', category: 'Destination', src: 'https://drive.google.com/thumbnail?id=1b2f2Z4ZR-ZWJWIlXayaOgzWAAjzZPzXi&sz=w1080', position: 'object-[center_top]' },
+  { id: '10', title: 'Regal Gold Kundan Portrait', category: 'Artistry', src: 'https://drive.google.com/thumbnail?id=19FYB0a5sSEVcn8Vfq933oABEXC-PnnOF&sz=w1080', position: 'object-[center_top]' }
 ];
 
 export default function Portfolio() {
