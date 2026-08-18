@@ -34,7 +34,7 @@ export const IMAGES = {
     "https://drive.google.com/thumbnail?id=1kc5bWqA_qoaEIqB6mvMbMXdjXP5RwovB&sz=w1920",
   ],
   hero: "https://drive.google.com/thumbnail?id=1uZQha2bv6_pDXpZZNxMKWZp-AlA_OwqT&sz=w1920", // Elegant South Asian Bride / Editorial
-  about: "https://drive.google.com/thumbnail?id=1n1Sefn5Ahl0tmbw2j956nayR3W_uEPwW&sz=w1080", // Niki - Makeup Artist
+  about: "https://drive.google.com/thumbnail?id=1QcGbWUKTjspC62leVO2aSpdXM5AYWGNj&sz=w1080", // Niki - Makeup Artist
   experience: "https://drive.google.com/thumbnail?id=1PSFKJbo2m3f_mrHuifIU3iKa5WF-sNLW&sz=w1080", // Niki styling jewelry
   destination: "https://drive.google.com/thumbnail?id=1FbLQN5cZv8JnQMoBgeR9kFlPtj7UV4Bf&sz=w1920", // Resort/Palace wedding
   contact: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?fm=webp&q=75&w=1080&fit=crop", // Close up details
