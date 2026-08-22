@@ -1,4 +1,4 @@
-export const LOGO_URL = "https://drive.google.com/thumbnail?id=1BAW1OILqFBTITyvqebyXaYYF7pTtIF-k&sz=w1000";
+export const LOGO_URL = "/logo.png";
 
 export const IMAGES = {
   heroSlides: [

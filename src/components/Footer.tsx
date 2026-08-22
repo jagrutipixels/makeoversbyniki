@@ -18,7 +18,7 @@ export default function Footer() {
             <img 
               src={LOGO_URL}
               alt="Makeovers by Niki"
-              className="h-16 md:h-20 object-contain w-auto brightness-0 invert"
+              className="h-16 md:h-20 object-contain w-auto"
               referrerPolicy="no-referrer"
               loading="lazy"
               decoding="async"

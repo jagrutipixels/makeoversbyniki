@@ -67,13 +67,10 @@ export default function Navbar() {
             <img 
               src={LOGO_URL}
               alt="Makeovers by Niki"
-              className="h-12 sm:h-14 md:h-18 py-1 block w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              className="h-12 sm:h-14 md:h-16 py-1 block w-auto object-contain transition-all duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
               decoding="async"
             />
-            <span className="font-serif tracking-[0.18em] text-secondary text-[11px] sm:text-xs md:text-sm uppercase font-semibold whitespace-nowrap">
-              MAKEOVERS BY NIKI
-            </span>
           </Link>
 
           {/* Desktop Nav */}
