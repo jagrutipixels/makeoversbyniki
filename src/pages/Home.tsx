@@ -126,21 +126,16 @@ export default function Home() {
       </Helmet>
 
       {/* Left Strip */}
-      <div className="hidden md:flex md:w-20 border-r border-white/10 flex-col items-center h-full z-50 bg-black/50 backdrop-blur-md justify-center pb-8 shrink-0">
-        <div className="flex flex-col items-center space-y-8">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-4 text-white/50 hover:text-white transition-colors group" aria-label="Twitter">
-            <Twitter size={16} className="group-hover:text-secondary transition-colors" />
-            <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors">twitter</span>
-          </a>
-          <div className="w-1 h-1 rounded-full bg-secondary opacity-50"></div>
+      <div className="hidden md:flex md:w-20 border-r border-white/10 flex-col items-center h-full z-50 bg-black/50 backdrop-blur-md justify-center shrink-0">
+        <div className="flex flex-col items-center space-y-12">
           <a href="https://www.instagram.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-4 text-white/50 hover:text-white transition-colors group" aria-label="Instagram">
-            <Instagram size={16} className="group-hover:text-secondary transition-colors" />
-            <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors">instagram</span>
+            <Instagram size={18} className="group-hover:text-secondary transition-colors" />
+            <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors font-medium">instagram</span>
           </a>
-          <div className="w-1 h-1 rounded-full bg-secondary opacity-50"></div>
+          <div className="w-1.5 h-1.5 rounded-full bg-secondary opacity-60"></div>
           <a href="https://www.facebook.com/makeoversbyniki" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center space-y-4 text-white/50 hover:text-white transition-colors group" aria-label="Facebook">
-            <Facebook size={16} className="group-hover:text-secondary transition-colors" />
-            <span className="[writing-mode:vertical-rl] rotate-180 text-[10px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors">facebook</span>
+            <Facebook size={18} className="group-hover:text-secondary transition-colors" />
+            <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] tracking-[0.25em] uppercase group-hover:text-secondary transition-colors font-medium">facebook</span>
           </a>
         </div>
       </div>
