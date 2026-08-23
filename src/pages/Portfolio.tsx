@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -27,19 +27,30 @@ export default function Portfolio() {
     return PORTFOLIO_ITEMS.filter(item => item.category === activeFilter);
   }, [activeFilter]);
 
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleNext = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (selectedIndex !== null) {
       setSelectedIndex((selectedIndex + 1) % filteredItems.length);
     }
   };
 
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handlePrev = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (selectedIndex !== null) {
       setSelectedIndex((selectedIndex - 1 + filteredItems.length) % filteredItems.length);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      if (e.key === 'Escape') setSelectedIndex(null);
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') handlePrev();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedIndex, filteredItems.length]);
 
   return (
     <div className="bg-brand-bg w-full pt-20 md:pt-24 pb-24 min-h-screen">

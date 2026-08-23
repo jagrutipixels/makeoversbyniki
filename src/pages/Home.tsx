@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { IMAGES, LOGO_URL } from '../data';
-import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, Twitter, ArrowLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X as CloseIcon, Instagram, Facebook, ArrowLeft } from 'lucide-react';
 
 const SLIDES = [
   {
